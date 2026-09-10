@@ -5,16 +5,16 @@
 .studyHero {
   max-width: 72rem;
   padding-bottom: 5.6rem;
-  border-bottom: 1px solid var(--borderColor);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.28);
 }
 
 .studyHero h2 {
   margin-bottom: 1.6rem;
-  color: var(--primaryColor);
+  color: var(--whiteColor);
 }
 
-.studyHero>p:not(.eyebrow) {
-  color: var(--mutedColor);
+.studyHero > p:not(.eyebrow) {
+  color: #d6e2ef;
   font-size: clamp(1.75rem, 2.4vw, 2rem);
 }
 
@@ -32,12 +32,12 @@
 
 .catalogHeader h3,
 .certificateCategory h4 {
-  color: var(--primaryColor);
+  color: var(--whiteColor);
 }
 
-.catalogHeader>p {
+.catalogHeader > p {
   max-width: 46rem;
-  color: var(--mutedColor);
+  color: #cbd5e1;
 }
 
 .certificateCategory {
@@ -69,10 +69,11 @@
 
 .certificateCard {
   overflow: hidden;
-  border: 1px solid var(--borderColor);
+  padding: 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
   border-radius: 1.2rem;
-  background: var(--surfaceColor);
-  box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.06);
+  background: rgba(15, 23, 42, 0.34);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.16);
 }
 
 .certificateCard a {
@@ -83,9 +84,8 @@
 .certificateCard img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  border-radius: 0.7rem;
   transition:
     transform 220ms ease,
     filter 220ms ease;

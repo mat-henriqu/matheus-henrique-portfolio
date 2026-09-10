@@ -1,171 +1,321 @@
 <!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+      content="Formação, cursos e certificados de Matheus Henrique em desenvolvimento de software."
+      name="description"
+    >
+    <title>Formação | Matheus Henrique</title>
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/css/variables.css" rel="stylesheet">
+    <link href="/assets/css/elements.css" rel="stylesheet">
+    <link href="/assets/css/menu.css" rel="stylesheet">
+    <link href="/assets/css/study.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    >
+    <script src="https://unpkg.com/i18next@20.6.1/dist/umd/i18next.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="Formação, cursos e certificados de Matheus Henrique em desenvolvimento de software."
-    name="description">
-  <title>Formação | Matheus Henrique</title>
-  <link href="/assets/img/favicon.png" rel="icon">
-  <link href="/assets/css/variables.css" rel="stylesheet">
-  <link href="/assets/css/elements.css" rel="stylesheet">
-  <link href="/assets/css/menu.css" rel="stylesheet">
-  <link href="/assets/css/study.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/i18next@20.6.1/dist/umd/i18next.min.js"></script>
-</head>
+  <body>
+    <!-- generated:navigation:start -->
+    <aside class="menu">
+      <div class="mainContent menuContent">
+        <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
+        <nav>
+          <ul id="menu-items">
+            <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
+            <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
+            <li><a href="study.html" data-navigation-key="education">Formação</a></li>
+            <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
+            <li>
+              <button
+                class="menu-language"
+                type="button"
+                data-language-toggle
+                onclick="toggleLanguage()"
+              >
+                <i class="fa-solid fa-language"></i>
+              </button>
+            </li>
+          </ul>
+          <button
+            id="menu-toggle"
+            class="menu-icon"
+            type="button"
+            aria-controls="menu-items"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </aside>
+    <!-- generated:navigation:end -->
 
-<body>
-  <!-- generated:navigation:start -->
-  <aside class="menu">
-    <div class="mainContent menuContent">
-      <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
-      <nav>
-        <ul id="menu-items">
-          <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
-          <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
-          <li><a href="study.html" data-navigation-key="education">Formação</a></li>
-          <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
-          <li>
-            <button class="menu-language" type="button" data-language-toggle onclick="toggleLanguage()">
-              <i class="fa-solid fa-language"></i>
-            </button>
-          </li>
-        </ul>
-        <button id="menu-toggle" class="menu-icon" type="button" aria-controls="menu-items" aria-expanded="false"
-          aria-label="Abrir menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </div>
-  </aside>
-  <!-- generated:navigation:end -->
-
-  <main class="whiteBg section" id="study">
-    <div class="mainContent studyContent">
-      <header class="studyHero">
-        <p class="eyebrow" id="studyEyebrow">Formação contínua</p>
-        <h2 id="faculty">Formação e certificações</h2>
-        <p id="descriptionFaculty">
-          Uma trilha de estudos focada em desenvolvimento de software, fundamentos sólidos e
-          tecnologias aplicadas a produtos web.
-        </p>
-      </header>
-
-      <section class="certificateCatalog" aria-labelledby="courses">
-        <div class="catalogHeader">
-          <div>
-            <p class="eyebrow" id="coursesEyebrow">Conhecimento em prática</p>
-            <h3 id="courses">Cursos e certificados</h3>
-          </div>
-          <p id="coursesDescription">
-            Certificados organizados por área para tornar a evolução técnica fácil de consultar.
+    <main class="blueBg section" id="study">
+      <div class="mainContent studyContent">
+        <header class="studyHero">
+          <p class="eyebrow" id="studyEyebrow">Formação contínua</p>
+          <h2 id="faculty">Formação e certificações</h2>
+          <p id="descriptionFaculty">
+            Uma trilha de estudos focada em desenvolvimento de software, fundamentos sólidos e
+            tecnologias aplicadas a produtos web.
           </p>
-        </div>
+        </header>
 
-        <section class="certificateCategory" aria-labelledby="typeLogic">
-          <h4 id="typeLogic">Lógica de programação</h4>
-          <div class="certificateGrid">
-            <article class="certificateCard">
-              <img alt="Certificado de lógica de programação da Udemy" decoding="async" height="2480" loading="lazy"
-                src="/assets/img/certificadoLogicaProgUdemy.webp" width="3334">
-            </article>
-            <article class="certificateCard">
-              <img alt="Certificado de informática e programação básica e avançada da Udemy" decoding="async"
-                height="2480" loading="lazy" src="/assets/img/certificadoInformaticaProgBasicAvancUdemy.webp"
-                width="3334">
-            </article>
-            <article class="certificateCard">
-              <img alt="Certificado de lógica de programação do Curso em Vídeo" decoding="async" height="1275"
-                loading="lazy" src="/assets/img/certificadoLogicaProgCursoEmVideo.webp" width="1650">
-            </article>
+        <section class="certificateCatalog" aria-labelledby="courses">
+          <div class="catalogHeader">
+            <div>
+              <p class="eyebrow" id="coursesEyebrow">Conhecimento em prática</p>
+              <h3 id="courses">Cursos e certificados</h3>
+            </div>
+            <p id="coursesDescription">
+              Certificados organizados por área para tornar a evolução técnica fácil de consultar.
+            </p>
           </div>
-        </section>
 
-        <section class="certificateCategory" aria-labelledby="frontendCourses">
-          <h4 id="frontendCourses">Front-end</h4>
-          <div class="certificateGrid">
-            <article class="certificateCard">
-              <a href="https://www.udemy.com/certificate/UC-3062d483-cdad-46c1-b768-291b04e9bcb7/"
-                rel="noopener noreferrer" target="_blank"><img alt="Certificado de HTML e CSS da Udemy" decoding="async"
-                  height="2480" loading="lazy" src="/assets/img/certificadoHtmlCssOInicioUdemy.webp" width="3334"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="https://www.udemy.com/certificate/UC-5641f70b-0ef2-42ee-a855-21dad6d9e6c9/"
-                rel="noopener noreferrer" target="_blank"><img alt="Certificado intermediário de HTML e CSS da Udemy"
-                  decoding="async" height="2480" loading="lazy" src="/assets/img/certificadoHtmlCssMedioUdemy.webp"
-                  width="3334"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="https://www.udemy.com/certificate/UC-4f49e190-46c6-479e-b6da-c7f78d06712d/"
-                rel="noopener noreferrer" target="_blank"><img alt="Certificado de Bootstrap da Udemy" decoding="async"
-                  height="2480" loading="lazy" src="/assets/img/certificadoBootstrapUdemy.webp" width="3334"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="https://hermes.dio.me/certificates/XROTAIJC.pdf" rel="noopener noreferrer" target="_blank"><img
-                  alt="Certificado de formação HTML Developer da DIO" decoding="async" height="1240" loading="lazy"
-                  src="/assets/img/certificadoFormacaoHtmlDeveloperDIO.webp" width="1753"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="https://hermes.dio.me/certificates/L0ZDYD6G.pdf" rel="noopener noreferrer" target="_blank"><img
-                  alt="Certificado de formação CSS Developer da DIO" decoding="async" height="1241" loading="lazy"
-                  src="/assets/img/certificadoFormacaoCssDeveloperDIO.webp" width="1754"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="https://hermes.dio.me/certificates/HNPMOWP4.pdf" rel="noopener noreferrer" target="_blank"><img
-                  alt="Certificado de formação JavaScript Developer da DIO" decoding="async" height="1241"
-                  loading="lazy" src="/assets/img/certificadoFormacaoJavaScriptDeveloperDIO.webp" width="1754"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="https://hermes.dio.me/certificates/RDXPEEQJ.pdf" rel="noopener noreferrer" target="_blank"><img
-                  alt="Certificado de formação React Developer da DIO" decoding="async" height="1241" loading="lazy"
-                  src="/assets/img/certificadoFormacaoReactDeveloperDIO.webp" width="1754"></a>
-            </article>
-          </div>
-        </section>
+          <section class="certificateCategory" aria-labelledby="typeLogic">
+            <h4 id="typeLogic">Lógica de programação</h4>
+            <div class="certificateGrid">
+              <article class="certificateCard">
+                <img
+                  alt="Certificado de lógica de programação da Udemy"
+                  decoding="async"
+                  height="2480"
+                  loading="lazy"
+                  src="/assets/img/certificadoLogicaProgUdemy.webp"
+                  width="3334"
+                >
+              </article>
+              <article class="certificateCard">
+                <img
+                  alt="Certificado de informática e programação básica e avançada da Udemy"
+                  decoding="async"
+                  height="2480"
+                  loading="lazy"
+                  src="/assets/img/certificadoInformaticaProgBasicAvancUdemy.webp"
+                  width="3334"
+                >
+              </article>
+              <article class="certificateCard">
+                <img
+                  alt="Certificado de lógica de programação do Curso em Vídeo"
+                  decoding="async"
+                  height="1275"
+                  loading="lazy"
+                  src="/assets/img/certificadoLogicaProgCursoEmVideo.webp"
+                  width="1650"
+                >
+              </article>
+            </div>
+          </section>
 
-        <section class="certificateCategory" aria-labelledby="aiCourses">
-          <h4 id="aiCourses">Inteligência artificial</h4>
-          <div class="certificateGrid">
-            <article class="certificateCard">
-              <a href="https://hermes.dio.me/certificates/8GCOKUNU.pdf" rel="noopener noreferrer" target="_blank"><img
-                  alt="Certificado Azure da DIO" decoding="async" height="1241" loading="lazy"
-                  src="/assets/img/certificadoAzureDio.webp" width="1754"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="https://hermes.dio.me/certificates/8BLOM2NE.pdf" rel="noopener noreferrer" target="_blank"><img
-                  alt="Certificado de fundamentos de IA generativa da DIO" decoding="async" height="1241" loading="lazy"
-                  src="/assets/img/certificadoBootcampNexaFundamentosIAGenerativaDIO.webp" width="1754"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="/assets/img/certificadoInteligenciaArtificialPratica.pdf" rel="noopener noreferrer"
-                target="_blank"><img alt="Certificado de inteligência artificial prática" decoding="async" height="1653"
-                  loading="lazy" src="/assets/img/certificadoInteligenciaArtificialPratica.webp" width="2334"></a>
-            </article>
-            <article class="certificateCard">
-              <a href="/assets/img/github_copilot_turma_out2025_certificado.pdf" rel="noopener noreferrer"
-                target="_blank"><img alt="Certificado GitHub Copilot" decoding="async" height="1241" loading="lazy"
-                  src="/assets/img/github_copilot_turma_out2025_certificado.webp" width="1754"></a>
-            </article>
-          </div>
-        </section>
+          <section class="certificateCategory" aria-labelledby="frontendCourses">
+            <h4 id="frontendCourses">Front-end</h4>
+            <div class="certificateGrid">
+              <article class="certificateCard">
+                <a
+                  href="https://www.udemy.com/certificate/UC-3062d483-cdad-46c1-b768-291b04e9bcb7/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado de HTML e CSS da Udemy"
+                    decoding="async"
+                    height="2480"
+                    loading="lazy"
+                    src="/assets/img/certificadoHtmlCssOInicioUdemy.webp"
+                    width="3334"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="https://www.udemy.com/certificate/UC-5641f70b-0ef2-42ee-a855-21dad6d9e6c9/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado intermediário de HTML e CSS da Udemy"
+                    decoding="async"
+                    height="2480"
+                    loading="lazy"
+                    src="/assets/img/certificadoHtmlCssMedioUdemy.webp"
+                    width="3334"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="https://www.udemy.com/certificate/UC-4f49e190-46c6-479e-b6da-c7f78d06712d/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado de Bootstrap da Udemy"
+                    decoding="async"
+                    height="2480"
+                    loading="lazy"
+                    src="/assets/img/certificadoBootstrapUdemy.webp"
+                    width="3334"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="https://hermes.dio.me/certificates/XROTAIJC.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado de formação HTML Developer da DIO"
+                    decoding="async"
+                    height="1240"
+                    loading="lazy"
+                    src="/assets/img/certificadoFormacaoHtmlDeveloperDIO.webp"
+                    width="1753"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="https://hermes.dio.me/certificates/L0ZDYD6G.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado de formação CSS Developer da DIO"
+                    decoding="async"
+                    height="1241"
+                    loading="lazy"
+                    src="/assets/img/certificadoFormacaoCssDeveloperDIO.webp"
+                    width="1754"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="https://hermes.dio.me/certificates/HNPMOWP4.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado de formação JavaScript Developer da DIO"
+                    decoding="async"
+                    height="1241"
+                    loading="lazy"
+                    src="/assets/img/certificadoFormacaoJavaScriptDeveloperDIO.webp"
+                    width="1754"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="https://hermes.dio.me/certificates/RDXPEEQJ.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado de formação React Developer da DIO"
+                    decoding="async"
+                    height="1241"
+                    loading="lazy"
+                    src="/assets/img/certificadoFormacaoReactDeveloperDIO.webp"
+                    width="1754"
+                  ></a
+                >
+              </article>
+            </div>
+          </section>
 
-        <section class="certificateCategory" aria-labelledby="linuxCourses">
-          <h4 id="linuxCourses">Linux</h4>
-          <div class="certificateGrid">
-            <article class="certificateCard">
-              <a href="https://hermes.dio.me/certificates/75E34FAF.pdf" rel="noopener noreferrer" target="_blank"><img
-                  alt="Certificado Linux da DIO" decoding="async" height="1241" loading="lazy"
-                  src="/assets/img/certificadoLinuxDio.webp" width="1754"></a>
-            </article>
-          </div>
-        </section>
-      </section>
-    </div>
-  </main>
-  <script src="/assets/js/i18nStudy.js"></script>
-  <script src="/assets/js/menu.js"></script>
-</body>
+          <section class="certificateCategory" aria-labelledby="aiCourses">
+            <h4 id="aiCourses">Inteligência artificial</h4>
+            <div class="certificateGrid">
+              <article class="certificateCard">
+                <a
+                  href="https://hermes.dio.me/certificates/8GCOKUNU.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado Azure da DIO"
+                    decoding="async"
+                    height="1241"
+                    loading="lazy"
+                    src="/assets/img/certificadoAzureDio.webp"
+                    width="1754"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="https://hermes.dio.me/certificates/8BLOM2NE.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado de fundamentos de IA generativa da DIO"
+                    decoding="async"
+                    height="1241"
+                    loading="lazy"
+                    src="/assets/img/certificadoBootcampNexaFundamentosIAGenerativaDIO.webp"
+                    width="1754"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="/assets/img/certificadoInteligenciaArtificialPratica.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado de inteligência artificial prática"
+                    decoding="async"
+                    height="1653"
+                    loading="lazy"
+                    src="/assets/img/certificadoInteligenciaArtificialPratica.webp"
+                    width="2334"
+                  ></a
+                >
+              </article>
+              <article class="certificateCard">
+                <a
+                  href="/assets/img/github_copilot_turma_out2025_certificado.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado GitHub Copilot"
+                    decoding="async"
+                    height="1241"
+                    loading="lazy"
+                    src="/assets/img/github_copilot_turma_out2025_certificado.webp"
+                    width="1754"
+                  ></a
+                >
+              </article>
+            </div>
+          </section>
 
+          <section class="certificateCategory" aria-labelledby="linuxCourses">
+            <h4 id="linuxCourses">Linux</h4>
+            <div class="certificateGrid">
+              <article class="certificateCard">
+                <a
+                  href="https://hermes.dio.me/certificates/75E34FAF.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img
+                    alt="Certificado Linux da DIO"
+                    decoding="async"
+                    height="1241"
+                    loading="lazy"
+                    src="/assets/img/certificadoLinuxDio.webp"
+                    width="1754"
+                  ></a
+                >
+              </article>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+    <script src="/assets/js/i18nStudy.js"></script>
+    <script src="/assets/js/menu.js"></script>
+  </body>
 </html>

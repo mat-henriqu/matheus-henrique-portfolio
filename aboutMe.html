@@ -1,100 +1,118 @@
 <!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+      content="Portfólio de Matheus Henrique, desenvolvedor front-end com experiência em aplicações web, integrações e bancos de dados."
+      name="description"
+    >
+    <title>Matheus Henrique | Desenvolvedor Front-End</title>
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/css/variables.css" rel="stylesheet">
+    <link href="/assets/css/elements.css" rel="stylesheet">
+    <link href="/assets/css/menu.css" rel="stylesheet">
+    <link href="/assets/css/aboutMe.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    >
+    <script src="https://unpkg.com/i18next@20.6.1/dist/umd/i18next.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta
-    content="Portfólio de Matheus Henrique, desenvolvedor front-end com experiência em aplicações web, integrações e bancos de dados."
-    name="description">
-  <title>Matheus Henrique | Desenvolvedor Front-End</title>
-  <link href="/assets/img/favicon.png" rel="icon">
-  <link href="/assets/css/variables.css" rel="stylesheet">
-  <link href="/assets/css/elements.css" rel="stylesheet">
-  <link href="/assets/css/menu.css" rel="stylesheet">
-  <link href="/assets/css/aboutMe.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/i18next@20.6.1/dist/umd/i18next.min.js"></script>
-</head>
+  <body>
+    <!-- generated:navigation:start -->
+    <aside class="menu">
+      <div class="mainContent menuContent">
+        <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
+        <nav>
+          <ul id="menu-items">
+            <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
+            <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
+            <li><a href="study.html" data-navigation-key="education">Formação</a></li>
+            <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
+            <li>
+              <button
+                class="menu-language"
+                type="button"
+                data-language-toggle
+                onclick="toggleLanguage()"
+              >
+                <i class="fa-solid fa-language"></i>
+              </button>
+            </li>
+          </ul>
+          <button
+            id="menu-toggle"
+            class="menu-icon"
+            type="button"
+            aria-controls="menu-items"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </aside>
+    <!-- generated:navigation:end -->
 
-<body>
-  <!-- generated:navigation:start -->
-  <aside class="menu">
-    <div class="mainContent menuContent">
-      <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
-      <nav>
-        <ul id="menu-items">
-          <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
-          <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
-          <li><a href="study.html" data-navigation-key="education">Formação</a></li>
-          <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
-          <li>
-            <button class="menu-language" type="button" data-language-toggle onclick="toggleLanguage()">
-              <i class="fa-solid fa-language"></i>
-            </button>
-          </li>
-        </ul>
-        <button id="menu-toggle" class="menu-icon" type="button" aria-controls="menu-items" aria-expanded="false"
-          aria-label="Abrir menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </div>
-  </aside>
-  <!-- generated:navigation:end -->
-
-  <main class="aboutMe blueBg section" id="aboutMe">
-    <div class="mainContent">
-      <section aria-labelledby="aboutMeTitle" class="aboutMeContent">
-        <div class="aboutMeText">
-          <p class="eyebrow" id="aboutMeEyebrow">Portfólio profissional</p>
-          <h2 id="aboutMeTitle">Desenvolvedor Front-End focado em produtos úteis</h2>
-          <p id="aboutMeDescription">
-            Crio aplicações web que combinam qualidade, desempenho e uma experiência clara para
-            quem usa. Uno desenvolvimento front-end, integração com APIs e conhecimento em banco
-            de dados para transformar necessidades de negócio em soluções consistentes.
-          </p>
-          <div class="aboutMeActions">
-            <a class="buttonLink" href="work.html" id="workAction">Conhecer minha experiência</a>
-            <a class="buttonLink buttonLink--secondary" href="contact.html" id="contactAction">Entrar em contato</a>
+    <main class="aboutMe blueBg section" id="aboutMe">
+      <div class="mainContent">
+        <section aria-labelledby="aboutMeTitle" class="aboutMeContent">
+          <div class="aboutMeText">
+            <p class="eyebrow" id="aboutMeEyebrow">Portfólio profissional</p>
+            <h2 id="aboutMeTitle">Desenvolvedor Front-End focado em produtos úteis</h2>
+            <p id="aboutMeDescription">
+              Crio aplicações web que combinam qualidade, desempenho e uma experiência clara para
+              quem usa. Uno desenvolvimento front-end, integração com APIs e conhecimento em banco
+              de dados para transformar necessidades de negócio em soluções consistentes.
+            </p>
+            <div class="aboutMeActions">
+              <a class="buttonLink" href="work.html" id="workAction">Conhecer minha experiência</a>
+              <a class="buttonLink buttonLink--secondary" href="contact.html" id="contactAction"
+                >Entrar em contato</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="aboutMeVisual">
-          <img alt="Ilustração de tecnologias utilizadas no desenvolvimento web" src="/assets/img/javaCssHtml.svg">
-        </div>
-      </section>
-
-      <section aria-labelledby="skillsTitle" class="skillsSection">
-        <div class="skillsHeader">
-          <div>
-            <p class="eyebrow" id="skillsEyebrow">Tecnologias</p>
-            <h3 id="skillsTitle">Base técnica para construir e evoluir produtos</h3>
+          <div class="aboutMeVisual">
+            <img
+              alt="Ilustração de tecnologias utilizadas no desenvolvimento web"
+              src="/assets/img/javaCssHtml.svg"
+            >
           </div>
-          <p id="skillsDescription">
-            Um repertório voltado para interfaces responsivas, integrações confiáveis e
-            colaboração entre front-end, back-end e dados.
-          </p>
-        </div>
-        <ul aria-label="Tecnologias e ferramentas" class="skillList">
-          <li>React</li>
-          <li>Next.js</li>
-          <li>Angular</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>HTML &amp; CSS</li>
-          <li>Java</li>
-          <li>Spring Boot</li>
-          <li>SQL</li>
-          <li>PostgreSQL</li>
-          <li>APIs REST</li>
-          <li>Git</li>
-        </ul>
-      </section>
-    </div>
-  </main>
+        </section>
 
-  <script src="/assets/js/i18nAboutMe.js"></script>
-  <script src="/assets/js/menu.js"></script>
-</body>
+        <section aria-labelledby="skillsTitle" class="skillsSection">
+          <div class="skillsHeader">
+            <div>
+              <p class="eyebrow" id="skillsEyebrow">Tecnologias</p>
+              <h3 id="skillsTitle">Base técnica para construir e evoluir produtos</h3>
+            </div>
+            <p id="skillsDescription">
+              Um repertório voltado para interfaces responsivas, integrações confiáveis e
+              colaboração entre front-end, back-end e dados.
+            </p>
+          </div>
+          <ul aria-label="Tecnologias e ferramentas" class="skillList">
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Angular</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>HTML &amp; CSS</li>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>SQL</li>
+            <li>PostgreSQL</li>
+            <li>APIs REST</li>
+            <li>Git</li>
+          </ul>
+        </section>
+      </div>
+    </main>
 
+    <script src="/assets/js/i18nAboutMe.js"></script>
+    <script src="/assets/js/menu.js"></script>
+  </body>
 </html>

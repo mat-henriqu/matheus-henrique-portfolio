@@ -9,7 +9,7 @@
   justify-content: space-between;
   gap: 2.4rem;
   padding-bottom: 4.8rem;
-  border-bottom: 1px solid var(--borderColor);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.28);
 }
 
 .workHeroText {
@@ -20,8 +20,8 @@
   margin-bottom: 1.6rem;
 }
 
-.workHeroText>p:not(.eyebrow) {
-  color: var(--mutedColor);
+.workHeroText > p:not(.eyebrow) {
+  color: #d6e2ef;
   font-size: clamp(1.75rem, 2.4vw, 2rem);
 }
 
@@ -39,12 +39,12 @@
 
 .sectionTitle {
   margin-bottom: 0.8rem;
-  color: var(--primaryColor);
+  color: var(--whiteColor);
 }
 
 .sectionDescription {
   max-width: 68rem;
-  color: var(--mutedColor);
+  color: #cbd5e1;
 }
 
 .skillGroups {
@@ -56,10 +56,10 @@
 
 .skillGroup {
   padding: 2rem;
-  border: 1px solid var(--borderColor);
+  border: 1px solid rgba(148, 163, 184, 0.28);
   border-radius: 1.2rem;
-  background: var(--surfaceColor);
-  box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.04);
+  background: rgba(15, 23, 42, 0.34);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.16);
 }
 
 .skillGroup h4 {
@@ -68,7 +68,7 @@
 }
 
 .skillGroup p {
-  color: var(--mutedColor);
+  color: #d6e2ef;
   font-size: 1.55rem;
 }
 
@@ -87,17 +87,17 @@
   bottom: 0.8rem;
   left: 0.7rem;
   width: 2px;
-  background: var(--borderColor);
+  background: rgba(148, 163, 184, 0.34);
   content: '';
 }
 
 .timelineItem {
   position: relative;
   padding: 2.4rem;
-  border: 1px solid var(--borderColor);
+  border: 1px solid rgba(148, 163, 184, 0.28);
   border-radius: 1.2rem;
-  background: var(--surfaceColor);
-  box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.04);
+  background: rgba(15, 23, 42, 0.34);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.16);
 }
 
 .timelineItem::before {
@@ -106,7 +106,7 @@
   left: -3.15rem;
   width: 1.4rem;
   height: 1.4rem;
-  border: 3px solid var(--surfaceMutedColor);
+  border: 3px solid var(--primaryColor);
   border-radius: 50%;
   background: var(--accentStrongColor);
   box-shadow: 0 0 0 1px var(--accentStrongColor);
@@ -126,18 +126,18 @@
 
 .timelineItem h4 {
   margin-bottom: 0.4rem;
-  color: var(--primaryColor);
+  color: var(--whiteColor);
 }
 
 .timelineCompany {
   margin-bottom: 1.2rem;
-  color: var(--mutedColor);
+  color: #cbd5e1;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.timelineItem>p:last-child {
-  color: var(--mutedColor);
+.timelineItem > p:last-child {
+  color: #d6e2ef;
 }
 
 @media (max-width: 640px) {

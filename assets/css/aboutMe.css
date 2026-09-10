@@ -23,7 +23,7 @@
   margin-bottom: 2rem;
 }
 
-.aboutMeText>p:not(.eyebrow) {
+.aboutMeText > p:not(.eyebrow) {
   max-width: 61rem;
   color: #d8e2f0;
   font-size: clamp(1.75rem, 2.4vw, 2rem);

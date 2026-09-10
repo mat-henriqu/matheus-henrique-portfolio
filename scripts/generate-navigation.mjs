@@ -27,8 +27,8 @@ function renderNavigation(pageName) {
       : '';
 
   const templateWithResume = resumeItem
-    ? navigationTemplate.replace('{{resume-item}}', resumeItem)
-    : navigationTemplate.replace(/^{{resume-item}}\r?\n?/m, '');
+    ? navigationTemplate.replace(/^[\t ]*{{resume-item}}$/m, resumeItem)
+    : navigationTemplate.replace(/^[\t ]*{{resume-item}}\r?\n?/m, '');
 
   return templateWithResume.trimEnd();
 }
