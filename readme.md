@@ -16,6 +16,7 @@ Portfólio pessoal estático para apresentar experiência profissional, principa
 - [Biome](https://biomejs.dev/) para formatação e análise estática dos arquivos do projeto.
 - `.editorconfig` e `biome.json` definem a formatação compartilhada: dois espaços, fim de linha LF e largura máxima de 100 colunas.
 - Netlify para hospedagem e redirecionamento da rota inicial para `aboutMe.html`.
+- As dependências externas versionadas usam SRI; o Netlify aplica uma Content Security Policy que limita scripts, estilos, fontes e imagens às origens necessárias.
 
 ## Desenvolvimento local
 

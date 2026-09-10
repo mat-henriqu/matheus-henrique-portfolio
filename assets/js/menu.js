@@ -98,5 +98,9 @@ if (menuToggle && menuItems) {
   });
 }
 
+document.querySelectorAll('[data-language-toggle]').forEach((button) => {
+  button.addEventListener('click', toggleLanguage);
+});
+
 window.toggleLanguage = toggleLanguage;
 updateNavigation();

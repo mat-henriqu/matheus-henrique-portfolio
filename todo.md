@@ -12,7 +12,7 @@
 ## Média prioridade
 
 - [ ] Transformar o formulário de contato em um formulário real com serviço de envio e mensagem de sucesso/erro; hoje ele depende do cliente de e-mail do visitante.
-- [ ] Substituir dependências de CDN por versões versionadas/localmente hospedadas ou implementar SRI e uma Content Security Policy.
+- [x] Substituir dependências de CDN por versões versionadas/localmente hospedadas ou implementar SRI e uma Content Security Policy.
 - [x] Converter certificados para WebP, definir `width` e `height` e usar carregamento preguiçoso na galeria de certificados.
 - [x] Unificar os trechos duplicados de cabeçalho com um gerador estático simples e um único template de menu.
 
