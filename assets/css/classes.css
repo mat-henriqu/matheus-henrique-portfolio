@@ -1,36 +1,36 @@
 .mainBg {
-    background-image: url(/assets/img/main-bg.svg);
-    background-size: cover;
-    background-position: center center;
-    color: var(--whiteColor);
+  background-image: url(/assets/img/main-bg.svg);
+  background-size: cover;
+  background-position: center center;
+  color: var(--whiteColor);
 }
 
 .whiteBg {
-    background-image: url(/assets/img/white-bg.svg);
-    background-size: cover;
-    background-position: center center;
-    background-color: var(--whiteColor);
-    color: var(--primaryColor);
+  background-image: url(/assets/img/white-bg.svg);
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--whiteColor);
+  color: var(--primaryColor);
 }
 
 .blueBg {
-    background-image: url(/assets/img/blue-bg.svg);
-    background-size: cover;
-    background-position: center center;
-    color: var(--whiteColor);
+  background-image: url(/assets/img/blue-bg.svg);
+  background-size: cover;
+  background-position: center center;
+  color: var(--whiteColor);
 }
 
 .mainContent {
-    max-width: 1200px;
-    margin: auto;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .section {
-    min-height: 100vh;
-    padding: 3rem;
+  min-height: 100vh;
+  padding: 3rem;
 }
 
 body .fullWidth {
-    width: 100%;
-    flex: 1 1 100%;
+  width: 100%;
+  flex: 1 1 100%;
 }

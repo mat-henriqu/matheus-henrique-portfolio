@@ -1,37 +1,56 @@
+# Portfólio de Matheus Henrique
 
-# 🌐 Matheus Henrique - Portfólio Pessoal
+Portfólio pessoal estático para apresentar experiência profissional, principais competências, formação e canais de contato.
 
-Bem-vindo ao meu portfólio! Este projeto foi desenvolvido para mostrar minhas habilidades e projetos como desenvolvedor front-end. Explore minhas experiências, habilidades técnicas e entre em contato através deste site.
+## Páginas
 
-## 🛠️ Tecnologias Utilizadas
-- **HTML** - Linguagem de marcação para estruturar a página 🌐
-- **CSS** - Estilização para criar um design visualmente atraente 🎨
+- `aboutMe.html`: apresentação e habilidades.
+- `work.html`: experiência profissional e currículo para download.
+- `top3Work.html`: três áreas de especialidade.
+- `study.html`: formação e certificados.
+- `contact.html`: redes sociais e formulário que abre o cliente de e-mail do visitante.
 
-## 📄 Páginas do Portfólio
-- **About Me**: Saiba mais sobre mim.
-- **Work**: Detalhes da minha experiência de trabalho e habilidades profissionais.
-- **Top 3 Works**: Meus três principais trabalhos, destacando minhas contribuições mais significativas.
-- **Study**: Um resumo das minhas formações acadêmicas e cursos concluídos.
-- **Projects**: Uma coleção de projetos realizados, com foco em tecnologias front-end.
-- **Contact**: Entre em contato comigo diretamente por e-mail ou pelas minhas redes sociais.
+## Tecnologias e qualidade
 
+- HTML, CSS e JavaScript puro.
+- [i18next](https://www.i18next.com/) via CDN para conteúdo em português e inglês.
+- [Biome](https://biomejs.dev/) para formatação e análise estática dos arquivos do projeto.
+- Netlify para hospedagem e redirecionamento da rota inicial para `aboutMe.html`.
 
-## 🌟 Funcionalidades
-- Design responsivo, adaptado para dispositivos móveis e desktop 📱💻
-- Layout limpo e intuitivo, focado em apresentar informações de forma clara e profissional 🔍
-- Links diretos para minhas redes sociais e projetos em plataformas como GitHub e LinkedIn 🌐
+## Desenvolvimento local
 
-## 💡 Melhorias Futuras
-- Adicionar mais interatividade com JavaScript.
-- Implementar uma versão mais otimizada com frameworks como React ou Next.js.
-- Incluir um sistema de temas (escuro/claro) para personalização do visual.
+Instale as dependências de desenvolvimento uma vez:
 
-## 🖥️ Demonstração
-Você pode acessar o portfólio online através do seguinte link: [meu-portifolio.com](https://mat-henriqu.site)
+```powershell
+npm install
+```
 
-## 🤝 Contribuições
-Contribuições e feedbacks são sempre bem-vindos! Sinta-se à vontade para entrar em contato ou abrir uma issue.
+Comandos de qualidade disponíveis após a instalação:
 
----
+```powershell
+npm run check
+```
 
-Feito com ❤️ por **Matheus Henrique** 👨‍💻
+```powershell
+npm run format
+```
+
+Para atualizar o menu compartilhado após editar o template:
+
+```powershell
+npm run generate
+```
+
+Para gerar novamente as versões WebP dos certificados usados na página de formação:
+
+```powershell
+npm run optimize:images
+```
+
+O GitHub Actions executa `npm run check` em pull requests e envios para `master`. Essa checagem também falha quando o menu gerado está desatualizado em relação a `templates/navigation.html`.
+
+> O site não exige etapa de build. Para visualizá-lo localmente, utilize qualquer servidor HTTP estático apontado para a raiz do repositório.
+
+## Publicação
+
+O arquivo `netlify.toml` mantém a rota `/` servindo `aboutMe.html`. Antes de publicar, valide o menu nos dois idiomas e os links externos.

@@ -16,34 +16,38 @@
 </head>
 
 <body>
-    <aside class="menu">
-        <div class="mainContent menuContent">
-            <h1><a href="">Matheus Henrique 👨🏻‍💻</a></h1>
-            <nav>
-                <ul id="menu-items">
-                    <li><a href="aboutMe.html">About me</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="top3Work.html">Top 3 Works</a></li>
-                    <li><a href="study.html">Study</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <button class="menu-language" onclick="toggleLanguage()">
+    <!-- generated:navigation:start -->
+<aside class="menu">
+    <div class="mainContent menuContent">
+        <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
+        <nav>
+            <ul id="menu-items">
+                <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
+                <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
+                <li><a href="top3Work.html" data-navigation-key="specialties">3 principais áreas</a></li>
+                <li><a href="study.html" data-navigation-key="education">Formação</a></li>
+                <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
+                <li>
+                    <button class="menu-language" type="button" data-language-toggle onclick="toggleLanguage()">
                         <i class="fa-solid fa-language"></i>
                     </button>
-                </ul>
-                <button id="menu-toggle" class="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </aside>
+                </li>
+
+            </ul>
+            <button id="menu-toggle" class="menu-icon" type="button" aria-controls="menu-items" aria-expanded="false" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</aside>
+<!-- generated:navigation:end -->
 
     <section id="aboutMe" class="aboutMe blueBg section">
         <div class="mainContent aboutMeContent">
             <div class="aboutMeText" id="text">
-                <h2 id="aboutMeTitle"></h2>
+                <h2 id="aboutMeTitle">Sobre mim</h2>
                 <p id="aboutMeDescription"></p>
-                <h2 id="skillsTitle"></h2>
+                <h2 id="skillsTitle">Habilidades</h2>
                 <p>
                     <img src="/assets/img/github.png" alt="GitHub">
                     <img src="/assets/img/sql.png" alt="SQL">
@@ -61,8 +65,8 @@
             </div>
         </div>
     </section>
-    <script src="/assets/js/menu.js"></script>
     <script src="/assets/js/i18nAboutMe.js"></script>
+    <script src="/assets/js/menu.js"></script>
 </body>
 
 </html>

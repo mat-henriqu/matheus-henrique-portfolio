@@ -16,40 +16,44 @@
 </head>
 
 <body>
-    <aside class="menu">
-        <div class="mainContent menuContent">
-            <h1><a href="">Matheus Henrique 👨🏻‍💻</a></h1>
-            <nav>
-                <ul id="menu-items">
-                    <li><a href="aboutMe.html">About me</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="top3Work.html">Top 3 Works</a></li>
-                    <li><a href="study.html">Study</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <button class="menu-language" onclick="toggleLanguage()">
+    <!-- generated:navigation:start -->
+<aside class="menu">
+    <div class="mainContent menuContent">
+        <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
+        <nav>
+            <ul id="menu-items">
+                <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
+                <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
+                <li><a href="top3Work.html" data-navigation-key="specialties">3 principais áreas</a></li>
+                <li><a href="study.html" data-navigation-key="education">Formação</a></li>
+                <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
+                <li>
+                    <button class="menu-language" type="button" data-language-toggle onclick="toggleLanguage()">
                         <i class="fa-solid fa-language"></i>
                     </button>
-                    <a href="/assets/cv/curriculo.pdf" download="curriculo.pdf" class="linkcurriculo">
-                        <button class="curriculo">
-                            <i class="fa-solid fa-file-arrow-down"></i> Baixar Currículo
-                        </button>
+                </li>
+                <li>
+                    <a href="/assets/cv/curriculo.pdf" download="curriculo.pdf" class="curriculo linkcurriculo">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span data-navigation-key="resume">Baixar currículo</span>
                     </a>
-                </ul>
-                <button id="menu-toggle" class="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </aside>
+                </li>
+            </ul>
+            <button id="menu-toggle" class="menu-icon" type="button" aria-controls="menu-items" aria-expanded="false" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</aside>
+<!-- generated:navigation:end -->
     <section id="work" class="whiteBg section">
         <div class="mainContent workContent">
             <div class="workText">
-                <h3 id="workTitle"></h3>
+                <h3 id="workTitle">📚 Experiência</h3>
                 <p id="workText"></p>
                 <br>
                 <br>
-                <h3 id="skillsTitle"></h3>
+                <h3 id="skillsTitle">🔧 Habilidades</h3>
                 <p id="skillsText">
                     - <strong id="lang"></strong> Java, JavaScript, TypeScript <br>
                     - <strong>Back-end FrameWorks:</strong> Spring Boot <br>
@@ -60,15 +64,15 @@
                 </p>
                 <br>
                 <br>
-                <h3 id="experience"></h3>
+                <h3 id="experience">💼 Experiência profissional</h3>
                 <br>
-                <h5 id="kyrosTitle"></h5>
+                <h5 id="kyrosTitle">Kyros Tecnologia - Analista de Sistemas II</h5>
                 <p id="kyrosText"></p>
                 <br>
-                <h5 id="kyrosTitleEstagiario"></h5>
+                <h5 id="kyrosTitleEstagiario">Kyros Tecnologia - Estagiário de Desenvolvimento</h5>
                 <p id="kyrosTextEstagiario"></p>
                 <br>
-                <h5 id="relotecTitle"></h5>
+                <h5 id="relotecTitle">Relotec Sistemas de Ponto e Acesso - Suporte de Sistemas</h5>
                 <p id="relotecText"></p>
             </div>
             <div class="workImg">
@@ -79,8 +83,8 @@
             </div>
         </div>
     </section>
-    <script src="/assets/js/menu.js"></script>
     <script src="/assets/js/i18nWork.js"></script>
+    <script src="/assets/js/menu.js"></script>
 </body>
 
 </html>

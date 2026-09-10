@@ -1,82 +1,82 @@
 .gridOneContentStudy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .gridMainHeadingStudy {
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    font-size: 2.8rem;
-    text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  text-align: center;
 }
 
 .gridDescriptionStudy {
-    margin-bottom: 3rem;
-    font-size: 2rem;
-    text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .gridTitleStudy {
-    text-align: center;
-    font-weight: bold;
-    margin: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
 }
 
 .gridStudy {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .gridStudy img {
-    width: 350px;
-    height: auto;
-    transition: all 300ms ease-in-out;
-    cursor: pointer;
-    margin: 0 10px;
+  width: 350px;
+  height: auto;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  margin: 0 10px;
 }
 
 .gridStudy img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
-    .gridMainHeadingStudy {
-        font-size: 2rem;
-        margin-top: 3rem;
-        margin-bottom: 1.5rem;
-    }
+  .gridMainHeadingStudy {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
 
-    .gridDescriptionStudy {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
+  .gridDescriptionStudy {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 
-    .gridStudy {
-        gap: 15px;
-    }
+  .gridStudy {
+    gap: 15px;
+  }
 
-    .gridStudy img {
-        width: 80%;
-    }
+  .gridStudy img {
+    width: 80%;
+  }
 }
 
 @media (max-width: 480px) {
-    .gridMainHeadingStudy {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
+  .gridMainHeadingStudy {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 
-    .gridDescriptionStudy {
-        font-size: 1.5rem;
-    }
+  .gridDescriptionStudy {
+    font-size: 1.5rem;
+  }
 
-    .gridStudy img {
-        width: 100%;
-        margin: 10px 0;
-    }
+  .gridStudy img {
+    width: 100%;
+    margin: 10px 0;
+  }
 }

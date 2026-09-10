@@ -3,100 +3,86 @@ const resources = {
     translation: {
       workTitle: "📚 Work",
       workText:
-        "I am a front-end developer, particularly focused on using React to build dynamic and responsive interfaces. I am always striving to improve my skills by adopting modern tools and best practices. I work well in teams and believe that collaboration is key to achieving innovative and scalable results.",
+        "I am a front-end developer focused on building dynamic and responsive interfaces with React. I continually improve my skills through modern tools and development practices. I work well in teams and believe collaboration is essential for innovative, scalable results.",
       skillsTitle: "🔧 Skills",
       lang: "Languages:",
       styles: "Styling:",
-      database: "DataBases:",
+      database: "Databases:",
       tools: "Tools:",
-      experience: "💼 Professionals Experiences",
+      experience: "💼 Professional experience",
       kyrosTitle:
         "<strong>Kyros Tecnologia</strong> - Systems Analyst II (April 2025 - Present)",
       kyrosText:
-        "I currently work as a Systems Analyst II, contributing to front-end development using Angular, Bootstrap, npm and GitLab. I started as a development intern, where I used a wide range of web technologies.",
+        "I work as a Systems Analyst II, contributing to front-end development with Angular, Bootstrap, npm and GitLab. I started as a development intern, working with a broad range of web technologies.",
       kyrosTitleEstagiario:
-        "<strong>Kyros Tecnologia</strong> - Development Intern (October 2023 - April 2025 · 1 year and 7 months)",
+        "<strong>Kyros Tecnologia</strong> - Development Intern (October 2023 - April 2025)",
       kyrosTextEstagiario:
-        "I utilized a broad range of skills, including Java, Spring Boot, Databases, HTML, CSS, JavaScript, TypeScript, React, Next.js, Bootstrap, Tailwind, and Shadcn. I worked in an agile environment, contributing to the development of web applications, delivering solutions, and driving significant improvements to the projects.",
+        "I worked with Java, Spring Boot, databases, HTML, CSS, JavaScript, TypeScript, React, Next.js, Bootstrap, Tailwind and Shadcn in an agile environment, helping deliver solutions and meaningful improvements to web applications.",
       relotecTitle:
-        "<strong>Relotec Sistemas de Ponto e Acesso</strong> - System Support (May 2023 - September 2023 · 5 months)",
+        "<strong>Relotec Sistemas de Ponto e Acesso</strong> - Systems Support (May 2023 - September 2023)",
       relotecText:
-        "I provided technical support and solutions for time and access control systems, ensuring stable and efficient operations.", // Novo campo
+        "I provided technical support and solutions for time and access control systems, helping ensure stable and efficient operations.",
     },
   },
   pt: {
     translation: {
-      workTitle: "📚 Trabalho",
+      workTitle: "📚 Experiência",
       workText:
-        "Eu sou um desenvolvedor front-end, com foco especial em usar React para criar interfaces dinâmicas e responsivas. Estou sempre buscando aprimorar minhas habilidades adotando ferramentas modernas e melhores práticas. Trabalho bem em equipe e acredito que a colaboração é fundamental para alcançar resultados inovadores e escaláveis.",
+        "Sou desenvolvedor front-end, com foco em criar interfaces dinâmicas e responsivas com React. Busco aprimorar continuamente minhas habilidades por meio de ferramentas modernas e boas práticas de desenvolvimento. Trabalho bem em equipe e acredito que a colaboração é essencial para resultados inovadores e escaláveis.",
       skillsTitle: "🔧 Habilidades",
       lang: "Linguagens:",
-      styles: "Estilizações:",
-      database: "Banco de Dados:",
+      styles: "Estilização:",
+      database: "Banco de dados:",
       tools: "Ferramentas:",
-      experience: "💼 Experiências Profissionais",
+      experience: "💼 Experiência profissional",
       kyrosTitle:
-        "<strong>Kyros Tecnologia</strong> - Analista de Sistema II (Abril de 2025 - Atual)",
+        "<strong>Kyros Tecnologia</strong> - Analista de Sistemas II (abril de 2025 - atual)",
       kyrosText:
-        "Atualmente atuo como Analista de Sistema II, contribuindo no desenvolvimento front-end utilizando Angular, Bootstrap, npm e GitLab. Iniciei como estagiário de desenvolvimento, onde utilizei uma ampla gama de tecnologias web.",
+        "Atuo como Analista de Sistemas II, contribuindo com o desenvolvimento front-end em Angular, Bootstrap, npm e GitLab. Iniciei como estagiário de desenvolvimento, trabalhando com uma ampla gama de tecnologias web.",
       kyrosTitleEstagiario:
-        "<strong>Kyros Tecnologia</strong> - Estagiário em Desenvolvimento (Outubro de 2023 - Abril de 2025 · 1 ano e 7 meses)",
+        "<strong>Kyros Tecnologia</strong> - Estagiário de Desenvolvimento (outubro de 2023 - abril de 2025)",
       kyrosTextEstagiario:
-        "Utilizei uma ampla gama de habilidades, incluindo Java, Spring Boot, Banco de Dados, HTML, CSS, JavaScript, TypeScript, React, Next.js, Bootstrap, Tailwind e Shadcn. Atuei no desenvolvimento de aplicações web em um ambiente ágil, contribuindo com soluções e melhorias significativas para os projetos.",
+        "Trabalhei com Java, Spring Boot, bancos de dados, HTML, CSS, JavaScript, TypeScript, React, Next.js, Bootstrap, Tailwind e Shadcn em ambiente ágil, contribuindo com soluções e melhorias relevantes para aplicações web.",
       relotecTitle:
-        "<strong>Relotec Sistemas de Ponto e Acesso</strong> - Suporte de Sistemas (Maio de 2023 - Setembro de 2023 · 5 meses)", 
+        "<strong>Relotec Sistemas de Ponto e Acesso</strong> - Suporte de Sistemas (maio de 2023 - setembro de 2023)",
       relotecText:
-        "Prestei suporte técnico e soluções para sistemas de controle de ponto e acesso, garantindo operações estáveis e eficientes.",
+        "Prestei suporte técnico e implementei soluções para sistemas de controle de ponto e acesso, ajudando a manter operações estáveis e eficientes.",
     },
   },
 };
 
+function updateContent() {
+  const htmlElements = ["kyrosTitle", "kyrosTitleEstagiario", "relotecTitle"];
+  const textElements = [
+    "workTitle",
+    "workText",
+    "skillsTitle",
+    "lang",
+    "styles",
+    "database",
+    "tools",
+    "experience",
+    "kyrosText",
+    "kyrosTextEstagiario",
+    "relotecText",
+  ];
+
+  htmlElements.forEach((key) => {
+    document.getElementById(key).innerHTML = i18next.t(key);
+  });
+
+  textElements.forEach((key) => {
+    document.getElementById(key).textContent = i18next.t(key);
+  });
+}
+
 i18next.init(
   {
-    lng: "pt",
+    lng: localStorage.getItem("portfolio-language") || "pt",
+    fallbackLng: "pt",
     resources,
   },
-  function (err, t) {
-    updateContent();
-  }
+  updateContent,
 );
 
-function updateContent() {
-  const elements = {
-    workTitle: "workTitle",
-    workText: "workText",
-    skillsTitle: "skillsTitle",
-    lang: "lang",
-    styles: "styles",
-    database: "database",
-    tools: "tools",
-    experience: "experience",
-    kyrosText: "kyrosText",
-    kyrosTitle: "kyrosTitle",
-    kyrosTitleEstagiario: "kyrosTitleEstagiario",
-    kyrosTextEstagiario: "kyrosTextEstagiario",
-    relotecTitle: "relotecTitle", // Novo campo
-    relotecText: "relotecText", // Novo campo
-  };
-
-  for (const [key, value] of Object.entries(elements)) {
-    const element = document.getElementById(value);
-    if (element) {
-      if (
-        key === "kyrosTitleEstagiario" ||
-        key === "relotecTitle" ||
-        key === "kyrosTitle"
-      ) {
-        element.innerHTML = i18next.t(key);
-      } else {
-        element.innerText = i18next.t(key);
-      }
-    }
-  }
-}
-
-function toggleLanguage() {
-  const currentLanguage = i18next.language;
-  const newLanguage = currentLanguage === "en" ? "pt" : "en";
-  i18next.changeLanguage(newLanguage, updateContent);
-}
+document.addEventListener("portfolio:languagechange", updateContent);

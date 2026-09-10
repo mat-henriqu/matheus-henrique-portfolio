@@ -12,40 +12,34 @@
     <link rel="stylesheet" href="/assets/css/menu.css">
     <link rel="stylesheet" href="/assets/css/contactMe.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script>
-        function sendEmail() {
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            const subject = `Contact from ${firstName} ${lastName}`;
-            const body = `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`;
-
-            window.location.href = `mailto:theush933@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        }
-    </script>
 </head>
 
 <body>
-    <aside class="menu">
-        <div class="mainContent menuContent">
-            <h1><a href="">Matheus Henrique 👨🏻‍💻</a></h1>
-            <nav>
-                <ul id="menu-items">
-                    <li><a href="aboutMe.html">About me</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="top3Work.html">Top 3 Works</a></li>
-                    <li><a href="study.html">Study</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <button id="menu-toggle" class="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </aside>
+    <!-- generated:navigation:start -->
+<aside class="menu">
+    <div class="mainContent menuContent">
+        <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
+        <nav>
+            <ul id="menu-items">
+                <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
+                <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
+                <li><a href="top3Work.html" data-navigation-key="specialties">3 principais áreas</a></li>
+                <li><a href="study.html" data-navigation-key="education">Formação</a></li>
+                <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
+                <li>
+                    <button class="menu-language" type="button" data-language-toggle onclick="toggleLanguage()">
+                        <i class="fa-solid fa-language"></i>
+                    </button>
+                </li>
+
+            </ul>
+            <button id="menu-toggle" class="menu-icon" type="button" aria-controls="menu-items" aria-expanded="false" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</aside>
+<!-- generated:navigation:end -->
     <section id="contact" class="blueBg section">
         <div class="mainContent contactMeContent">
             <div class="contactMeText">
@@ -67,7 +61,7 @@
             <div class="contactMeImg">
                 <p><img src="/assets/img/contactMePage.svg" alt="Connect with me"></p>
             </div>
-            <div class="contactForm">
+            <form class="contactForm" id="contact-form">
                 <fieldset class="formGrid">
                     <legend>Contact Form</legend>
                     <div class="formGroup">
@@ -88,12 +82,13 @@
                             required></textarea>
                     </div>
                     <div class="formGroup fullWidth">
-                        <button type="button" onclick="sendEmail()">Send Message</button>
+                        <button type="submit">Send Message</button>
                     </div>
                 </fieldset>
-            </div>
+            </form>
         </div>
     </section>
+    <script src="/assets/js/contact.js"></script>
     <script src="/assets/js/menu.js"></script>
 </body>
 

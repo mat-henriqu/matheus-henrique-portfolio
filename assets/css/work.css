@@ -1,139 +1,143 @@
 .workContent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--gap);
-    min-height: 100vh;
-    padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  min-height: 100vh;
+  padding-top: 50px;
 }
 
 .workText {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .workImg {
-    max-width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    gap: 100px;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 100px;
 }
 
 .workText h2 {
-    text-transform: uppercase;
-    font-size: 2.3rem;
-    margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
 }
 
 .workText p {
-    margin-bottom: 0.9rem;
+  margin-bottom: 0.9rem;
 }
 
 .workImg img {
-    max-width: 100%;
-    height: auto;
-    margin: auto;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 
 .workText {
-    overflow: auto;
+  overflow: auto;
 }
 
 .workText {
-    transform: translateX(-100%);
-    animation: slideIn 2s forwards;
+  transform: translateX(-100%);
+  animation: slideIn 2s forwards;
 }
 
 .curriculo {
-    background-color: transparent;
-    color: inherit;
-    border: 2px solid var(--primaryColor);
-    padding: 10px 20px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
-    cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  border: 2px solid var(--primaryColor);
+  padding: 10px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.2s;
+  cursor: pointer;
 }
 
 .curriculo:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .linkcurriculo {
-    display: flex;
+  display: flex;
 }
 
 @keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .imgreact {
-    overflow: auto;
+  overflow: auto;
 }
 
 .imgreact {
-    transform-origin: center;
-    animation: rotate 5s linear infinite;
+  transform-origin: center;
+  animation: rotate 5s linear infinite;
 }
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .imgbanco {
-    overflow: auto;
+  overflow: auto;
 }
 
 .imgbanco {
-    animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .pulse {
-    overflow: auto;
+  overflow: auto;
 }
 
 .pulse {
-    animation: pulse 2s infinite alternate;
+  animation: pulse 2s infinite alternate;
 }
 
 @keyframes pulse {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 @media (max-width: 1280px) {
-    .workContent {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        padding-top: 0px;
-    }
+  .workContent {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 0px;
+  }
 }

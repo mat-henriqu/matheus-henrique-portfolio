@@ -19,11 +19,6 @@
   status = 200
 
 [[redirects]]
-  from = "/projects.html"
-  to = "/projects.html"
-  status = 200
-
-[[redirects]]
   from = "/contact.html"
   to = "/contact.html"
   status = 200

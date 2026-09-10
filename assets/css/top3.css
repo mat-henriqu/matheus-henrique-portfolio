@@ -1,58 +1,59 @@
 .gridOneContent {
-    display: flex;
-    flex-flow: column wrap;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .gridMainHeading {
-    /* h2 */
-    margin-top: 8rem;
-    margin-bottom: 15rem;
+  /* h2 */
+  margin-top: 8rem;
+  margin-bottom: 15rem;
 }
 
 .gridDescription {
-    /* p */
-    margin-top: -13.5rem;
-    margin-bottom: 7.5rem;
+  /* p */
+  margin-top: -13.5rem;
+  margin-bottom: 7.5rem;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--gap);
-    counter-reset: gridCounter;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--gap);
+  counter-reset: gridCounter;
 }
 
 .grid h3 {
-    font-size: 2.8rem;
-    position: relative;
-    padding-left: 5rem;
-    padding-bottom: 3rem;
+  font-size: 2.8rem;
+  position: relative;
+  padding-left: 5rem;
+  padding-bottom: 3rem;
 }
 
 .grid h3::before {
-    counter-increment: gridCounter;
-    content: counter(gridCounter);
-    position: absolute;
-    font-size: 6rem;
-    font-style: italic;
-    top: -1.2rem;
-    left: -5px;
-    transform: rotate(7deg);
+  counter-increment: gridCounter;
+  content: counter(gridCounter);
+  position: absolute;
+  font-size: 6rem;
+  font-style: italic;
+  top: -1.2rem;
+  left: -5px;
+  transform: rotate(7deg);
 }
 
 .grid h3 {
-    overflow: auto;
+  overflow: auto;
 }
 
 .grid h3 {
-    animation: count 2s infinite;
+  animation: count 2s infinite;
 }
 
 @keyframes count {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-15px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }

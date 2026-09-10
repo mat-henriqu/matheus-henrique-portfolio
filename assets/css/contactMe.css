@@ -1,88 +1,85 @@
 .contactMeContent {
-    padding-top: 5rem;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: var(--gap);
-    min-height: 100vh;
-
+  padding-top: 5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--gap);
+  min-height: 100vh;
 }
 
 .contactMeText {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .contactMeImg {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .contactMeText h2 {
-    font-size: 2.3rem;
-    margin-bottom: 1.2rem;
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
 }
 
 .contactMeText p {
-    margin-bottom: 0.9rem;
+  margin-bottom: 0.9rem;
 }
 
 .contactMeImg img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .contactForm {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .contactForm .formGrid {
-    border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gap);
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap);
 }
 
 .formGrid legend {
-    font-style: italic;
-    font-size: 1.6rem;
-    margin-bottom: 2.5rem;
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
 }
 
 .formGroup {
-    flex: 1 1 320px;
+  flex: 1 1 320px;
 }
 
 .formGroup label {
-    display: block;
+  display: block;
 }
 
 .formGroup input,
 .formGroup textarea {
-    border: none;
-    background-color: var(--primaryColor);
-    color: var(--whiteColor);
-    padding: 1.5rem 2rem;
-    width: 100%;
+  border: none;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  padding: 1.5rem 2rem;
+  width: 100%;
 }
 
 .formGroup button {
-    border: 5px solid var(--light-gray-color);
-    background: none;
-    color: var(--light-gray-color);
-    padding: 1.5rem 2rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
+  border: 5px solid var(--light-gray-color);
+  background: none;
+  color: var(--light-gray-color);
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .formGroup button:hover {
-    border: 5px solid var(--primaryColor);
-    background: var(--light-gray-color);
-    color: var(--primaryColor);
+  border: 5px solid var(--primaryColor);
+  background: var(--light-gray-color);
+  color: var(--primaryColor);
 }

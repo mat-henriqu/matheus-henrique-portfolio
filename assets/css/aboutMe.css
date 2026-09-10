@@ -1,84 +1,83 @@
 .aboutMe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aboutMeContent {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: var(--gap);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--gap);
 }
 
 .aboutMeText {
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 1 50%;
-    justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 50%;
+  justify-content: center;
 }
 
 .aboutMeText {
-    overflow:auto;
+  overflow: auto;
 }
 
 @keyframes reveal {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .aboutMeText {
-    animation: reveal 4s  alternate; 
-}
-
-
-.aboutMeImg {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-
+  animation: reveal 4s alternate;
 }
 
 .aboutMeImg {
-    overflow:auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.aboutMeImg {
+  overflow: auto;
 }
 
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .aboutMeImg {
-    animation: bounce 2s infinite ; 
+  animation: bounce 2s infinite;
 }
 
 .aboutMeText h2 {
-    text-transform: uppercase;
-    font-size: 2.3rem;
-    margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
 }
 
 .aboutMeText p {
-    margin-bottom: 0.9rem;
+  margin-bottom: 0.9rem;
 }
 
 .aboutMeImg img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 1280px) {
-    .aboutMeContent {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
+  .aboutMeContent {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 }

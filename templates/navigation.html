@@ -1,0 +1,23 @@
+<aside class="menu">
+    <div class="mainContent menuContent">
+        <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
+        <nav>
+            <ul id="menu-items">
+                <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
+                <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
+                <li><a href="top3Work.html" data-navigation-key="specialties">3 principais áreas</a></li>
+                <li><a href="study.html" data-navigation-key="education">Formação</a></li>
+                <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
+                <li>
+                    <button class="menu-language" type="button" data-language-toggle onclick="toggleLanguage()">
+                        <i class="fa-solid fa-language"></i>
+                    </button>
+                </li>
+{{resume-item}}
+            </ul>
+            <button id="menu-toggle" class="menu-icon" type="button" aria-controls="menu-items" aria-expanded="false" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</aside>

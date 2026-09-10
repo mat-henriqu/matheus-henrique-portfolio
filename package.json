@@ -1,0 +1,17 @@
+{
+  "name": "matheus-henrique-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfólio estático de Matheus Henrique.",
+  "scripts": {
+    "check": "npm run check:generated && biome check .",
+    "check:generated": "node scripts/generate-navigation.mjs --check",
+    "format": "biome format --write .",
+    "generate": "node scripts/generate-navigation.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.12",
+    "sharp": "^0.35.4"
+  }
+}
