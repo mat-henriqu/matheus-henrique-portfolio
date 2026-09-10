@@ -35,20 +35,10 @@
     },
     "jsxRuntime": "transparent"
   },
-  "json": {
-    "formatter": {
-      "enabled": true,
-      "trailingCommas": "none"
-    }
-  },
+  "json": { "formatter": { "enabled": true, "trailingCommas": "none" } },
   "css": {
-    "parser": {
-      "tailwindDirectives": true
-    },
-    "formatter": {
-      "enabled": true,
-      "quoteStyle": "single"
-    }
+    "parser": { "tailwindDirectives": true },
+    "formatter": { "enabled": true, "quoteStyle": "single" }
   },
   "html": {
     "experimentalFullSupportEnabled": true,
@@ -62,10 +52,7 @@
   },
   "linter": {
     "enabled": true,
-    "domains": {
-      "project": "recommended",
-      "types": "recommended"
-    },
+    "domains": { "project": "recommended", "types": "recommended" },
     "rules": {
       "preset": "recommended",
       "a11y": {
@@ -84,10 +71,7 @@
         "noUndeclaredDependencies": "error",
         "noUnresolvedImports": "error"
       },
-      "performance": {
-        "noAwaitInLoops": "error",
-        "useTopLevelRegex": "error"
-      },
+      "performance": { "noAwaitInLoops": "error", "useTopLevelRegex": "error" },
       "style": {
         "noParameterAssign": "error",
         "useBlockStatements": "error",
@@ -117,16 +101,9 @@
       "includes": ["scripts/**"],
       "linter": {
         "rules": {
-          "complexity": {
-            "noExcessiveCognitiveComplexity": "off"
-          },
-          "performance": {
-            "noAwaitInLoops": "off",
-            "useTopLevelRegex": "off"
-          },
-          "suspicious": {
-            "noConsole": "off"
-          }
+          "complexity": { "noExcessiveCognitiveComplexity": "off" },
+          "performance": { "noAwaitInLoops": "off", "useTopLevelRegex": "off" },
+          "suspicious": { "noConsole": "off" }
         }
       }
     }
