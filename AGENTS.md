@@ -18,27 +18,26 @@ O objetivo de qualquer mudança deve ser melhorar a apresentação profissional,
 
 - `aboutMe.html`: apresentação e lista de tecnologias.
 - `work.html`: experiência profissional e link para download do currículo.
-- `top3Work.html`: áreas de especialidade.
 - `study.html`: formação e certificados.
-- `contact.html`: redes sociais e formulário baseado em `mailto:`.
+- `contact.html`: redes sociais e formulário traduzido baseado em `mailto:`.
 - `assets/css/`: estilos globais e estilos por página.
 - `assets/js/menu.js`: menu móvel, persistência do idioma e atualização da navegação.
-- `assets/js/i18nAboutMe.js`, `i18nWork.js`, `i18nTop3Work.js` e `i18nStudy.js`: textos traduzidos específicos de cada página.
+- `assets/js/i18nAboutMe.js`, `i18nWork.js`, `i18nStudy.js` e `i18nContact.js`: textos traduzidos específicos de cada página.
 - `assets/js/contact.js`: coleta o formulário de contato com `FormData` e abre o cliente de e-mail do visitante.
 - `assets/img/`: ilustrações, ícones, certificados originais e versões WebP geradas.
 - `assets/cv/curriculo.pdf`: currículo disponibilizado por `work.html`.
 - `templates/navigation.html`: fonte única do cabeçalho/menu.
-- `scripts/generate-navigation.mjs`: injeta o menu gerado nas cinco páginas estáticas.
+- `scripts/generate-navigation.mjs`: injeta o menu gerado nas quatro páginas estáticas.
 - `scripts/optimize-images.mjs`: gera os WebPs dos certificados utilizados em `study.html`.
 - `.github/workflows/quality.yml`: checagem de qualidade no GitHub Actions.
 - `biome.json`: configuração de formatação e análise estática.
 - `netlify.toml`: mantém `/` servindo `aboutMe.html` no Netlify.
 
-Não existe mais página `Projects`: `projects.html`, seu CSS, seu i18n e a rota no Netlify foram removidos. Não recrie essa página ou seus links sem solicitação explícita.
+Não existem mais as páginas `Projects` e `top3Work`: seus HTMLs, CSSs, i18ns e links de menu foram removidos. A rota legada `/top3work` redireciona para `/work.html`; não recrie essas páginas ou seus links sem solicitação explícita.
 
 ## Menu e internacionalização
 
-O menu não deve ser mantido manualmente nos cinco HTMLs.
+O menu não deve ser mantido manualmente nos quatro HTMLs.
 
 1. Edite somente `templates/navigation.html` quando a estrutura, links, rótulos-padrão ou atributos do menu precisarem mudar.
 2. Execute `npm run generate` para propagar o menu.

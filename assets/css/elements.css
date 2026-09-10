@@ -1,7 +1,7 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -10,9 +10,18 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  color: var(--primaryColor);
+  background: var(--surfaceMutedColor);
+  color: var(--textColor);
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 h1,
@@ -21,43 +30,51 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
+  color: inherit;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.16;
 }
 
 h1 {
-  font-size: 6rem;
-  padding-left: 10px;
+  font-size: clamp(3.8rem, 6vw, 6.4rem);
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: clamp(3.2rem, 5vw, 5.2rem);
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: clamp(2.1rem, 3vw, 2.8rem);
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 h5 {
-  font-size: 1.6rem;
-}
-
-h6 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
-  text-align: center;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accentColor);
+  outline-offset: 3px;
 }
 
 p {
-  font-size: 1.75rem;
-  line-height: 1.5;
+  font-size: 1.7rem;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 9.6rem 2rem 4.8rem;
+  }
 }

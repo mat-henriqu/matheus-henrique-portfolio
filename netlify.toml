@@ -9,9 +9,14 @@
   status = 200
 
 [[redirects]]
+  from = "/top3work"
+  to = "/work.html"
+  status = 301
+
+[[redirects]]
   from = "/top3Work.html"
-  to = "/top3Work.html"
-  status = 200
+  to = "/work.html"
+  status = 301
 
 [[redirects]]
   from = "/study.html"

@@ -1,95 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Henrique 👨🏻‍💻</title>
-    <link rel="icon" href="/assets/img/favicon.png" />
-    <link rel="stylesheet" href="/assets/css/variables.css">
-    <link rel="stylesheet" href="/assets/css/elements.css">
-    <link rel="stylesheet" href="/assets/css/classes.css">
-    <link rel="stylesheet" href="/assets/css/menu.css">
-    <link rel="stylesheet" href="/assets/css/contactMe.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-
-<body>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Canais de contato de Matheus Henrique." name="description">
+    <title>Contato | Matheus Henrique</title>
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/css/variables.css" rel="stylesheet">
+    <link href="/assets/css/elements.css" rel="stylesheet">
+    <link href="/assets/css/classes.css" rel="stylesheet">
+    <link href="/assets/css/menu.css" rel="stylesheet">
+    <link href="/assets/css/contactMe.css" rel="stylesheet">
+    <script src="https://unpkg.com/i18next@20.6.1/dist/umd/i18next.min.js"></script>
+  </head>
+  <body>
     <!-- generated:navigation:start -->
-<aside class="menu">
-    <div class="mainContent menuContent">
+    <aside class="menu">
+      <div class="mainContent menuContent">
         <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
         <nav>
-            <ul id="menu-items">
-                <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
-                <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
-                <li><a href="top3Work.html" data-navigation-key="specialties">3 principais áreas</a></li>
-                <li><a href="study.html" data-navigation-key="education">Formação</a></li>
-                <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
-                <li>
-                    <button class="menu-language" type="button" data-language-toggle onclick="toggleLanguage()">
-                        <i class="fa-solid fa-language"></i>
-                    </button>
-                </li>
-
-            </ul>
-            <button id="menu-toggle" class="menu-icon" type="button" aria-controls="menu-items" aria-expanded="false" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
-            </button>
+          <ul id="menu-items">
+            <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
+            <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
+            <li><a href="study.html" data-navigation-key="education">Formação</a></li>
+            <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
+            <li>
+              <button
+                class="menu-language"
+                type="button"
+                data-language-toggle
+                onclick="toggleLanguage()"
+              >
+                <i class="fa-solid fa-language"></i>
+              </button>
+            </li>
+          </ul>
+          <button
+            id="menu-toggle"
+            class="menu-icon"
+            type="button"
+            aria-controls="menu-items"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
         </nav>
-    </div>
-</aside>
-<!-- generated:navigation:end -->
-    <section id="contact" class="blueBg section">
-        <div class="mainContent contactMeContent">
-            <div class="contactMeText">
-                <h2>Get in Touch</h2>
-                <p>Feel free to reach out through any of the following channels:</p>
-                <p>
-                    <a href="https://github.com/mat-henriqu" target="_blank" aria-label="GitHub"><img
-                            src="/assets/img/github.png" alt="GitHub"></a>
-                    <a href="https://www.linkedin.com/in/mat-henriqu/" target="_blank" aria-label="LinkedIn"><img
-                            src="/assets/img/linkedin.png" alt="LinkedIn"></a>
-                    <a href="https://www.instagram.com/mat_henriqu/" target="_blank" aria-label="Instagram"><img
-                            src="/assets/img/instagram.png" alt="Instagram"></a>
-                    <a href="https://www.dio.me/users/mat_henriqu" target="_blank" aria-label="DIO"><img
-                            src="/assets/img/dio.svg" alt="DIO"></a>
-                    <a href="https://wa.me/+5534997638331" target="_blank" aria-label="WhatsApp"><img
-                            src="/assets/img/whatsapp.png" alt="WhatsApp"></a>
-                </p>
-            </div>
-            <div class="contactMeImg">
-                <p><img src="/assets/img/contactMePage.svg" alt="Connect with me"></p>
-            </div>
-            <form class="contactForm" id="contact-form">
-                <fieldset class="formGrid">
-                    <legend>Contact Form</legend>
-                    <div class="formGroup">
-                        <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="Your First Name" required>
-                    </div>
-                    <div class="formGroup">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Your Last Name" required>
-                    </div>
-                    <div class="formGroup">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="formGroup fullWidth">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Your Message" cols="30" rows="10"
-                            required></textarea>
-                    </div>
-                    <div class="formGroup fullWidth">
-                        <button type="submit">Send Message</button>
-                    </div>
-                </fieldset>
-            </form>
+      </div>
+    </aside>
+    <!-- generated:navigation:end -->
+
+    <main class="blueBg section" id="contact">
+      <div class="mainContent contactPageContent">
+        <header class="contactHero">
+          <p class="eyebrow" id="contactEyebrow">Vamos conversar</p>
+          <h2 id="contactTitle">Aberto a novas conexões e desafios</h2>
+          <p id="contactDescription">
+            Escolha o canal que preferir ou envie uma mensagem pelo formulário.
+          </p>
+        </header>
+
+        <div class="contactGrid">
+          <aside class="contactChannels" aria-labelledby="channelsTitle">
+            <h3 id="channelsTitle">Canais profissionais</h3>
+            <p id="channelsDescription">
+              Estou disponível para trocar ideias, conversar sobre oportunidades e colaborar em
+              novos projetos.
+            </p>
+            <ul class="socialLinks">
+              <li>
+                <a
+                  aria-label="GitHub"
+                  href="https://github.com/mat-henriqu"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img alt="GitHub" src="/assets/img/github.png"><span>GitHub</span
+                  ><i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i></a
+                >
+              </li>
+              <li>
+                <a
+                  aria-label="LinkedIn"
+                  href="https://www.linkedin.com/in/mat-henriqu/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img alt="LinkedIn" src="/assets/img/linkedin.png"><span>LinkedIn</span
+                  ><i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i></a
+                >
+              </li>
+              <li>
+                <a
+                  aria-label="Instagram"
+                  href="https://www.instagram.com/mat_henriqu/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img alt="Instagram" src="/assets/img/instagram.png"><span>Instagram</span
+                  ><i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i></a
+                >
+              </li>
+              <li>
+                <a
+                  aria-label="DIO"
+                  href="https://www.dio.me/users/mat_henriqu"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img alt="DIO" src="/assets/img/dio.svg"><span>DIO</span
+                  ><i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i></a
+                >
+              </li>
+              <li>
+                <a
+                  aria-label="WhatsApp"
+                  href="https://wa.me/+5534997638331"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><img alt="WhatsApp" src="/assets/img/whatsapp.png"><span>WhatsApp</span
+                  ><i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i></a
+                >
+              </li>
+            </ul>
+          </aside>
+
+          <form class="contactForm" id="contact-form">
+            <fieldset class="formGrid">
+              <legend id="formLegend">Envie uma mensagem</legend>
+              <p class="formDescription" id="formDescription">
+                O envio abre o seu cliente de e-mail com a mensagem já preenchida.
+              </p>
+              <div class="formGroup">
+                <label for="firstName" id="firstNameLabel">Nome</label>
+                <input id="firstName" name="firstName" placeholder="Seu nome" required type="text">
+              </div>
+              <div class="formGroup">
+                <label for="lastName" id="lastNameLabel">Sobrenome</label>
+                <input
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Seu sobrenome"
+                  required
+                  type="text"
+                >
+              </div>
+              <div class="formGroup fullWidth">
+                <label for="email" id="emailLabel">E-mail</label>
+                <input id="email" name="email" placeholder="voce@exemplo.com" required type="email">
+              </div>
+              <div class="formGroup fullWidth">
+                <label for="message" id="messageLabel">Mensagem</label>
+                <textarea
+                  cols="30"
+                  id="message"
+                  name="message"
+                  placeholder="Como posso ajudar?"
+                  required
+                  rows="8"
+                ></textarea>
+              </div>
+              <div class="formGroup fullWidth">
+                <button id="submitLabel" type="submit">Abrir e-mail para enviar</button>
+              </div>
+            </fieldset>
+          </form>
         </div>
-    </section>
+      </div>
+    </main>
+    <script src="/assets/js/i18nContact.js"></script>
     <script src="/assets/js/contact.js"></script>
     <script src="/assets/js/menu.js"></script>
-</body>
-
+  </body>
 </html>

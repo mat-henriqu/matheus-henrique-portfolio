@@ -1,111 +1,145 @@
 .menu {
   position: fixed;
-  background-color: var(--primaryColor);
-  color: var(--whiteColor);
   top: 0;
-  left: 0;
   right: 0;
-  width: 100%;
+  left: 0;
   z-index: 100;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(5, 10, 26, 0.9);
+  color: var(--whiteColor);
+  backdrop-filter: blur(16px);
 }
 
 .menuContent {
   display: flex;
-  justify-content: space-between;
+  min-height: 7.2rem;
   align-items: center;
-  padding: 0;
+  justify-content: space-between;
+  padding: 0 2.4rem;
 }
 
 .menu h1 {
-  font-size: 2rem;
+  flex-shrink: 0;
+  font-size: 1.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu h1 a {
+  display: inline-flex;
+  align-items: center;
+  transition: color 180ms ease;
+}
+
+.menu h1 a:hover {
+  color: var(--accentColor);
+}
+
+.menu nav {
+  display: flex;
+  align-items: center;
 }
 
 .menu ul {
   display: flex;
+  align-items: center;
   list-style: none;
 }
 
-.menu ul li a {
-  display: block;
-  padding: 2rem;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  position: relative;
+.menu ul li a,
+.menu-language {
+  display: inline-flex;
+  min-height: 7.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.2rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
 }
 
-.menu ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: darkred;
-  transition: all 285ms ease-in-out;
+.menu ul li a:hover,
+.menu ul li a.is-active,
+.menu-language:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accentColor);
 }
 
-.menu ul li a:hover::after {
-  width: 50%;
-  left: 25%;
+.menu .curriculo {
+  min-height: auto;
+  margin-left: 0.8rem;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid rgba(56, 189, 248, 0.7);
+  border-radius: 0.6rem;
+  color: var(--whiteColor);
 }
 
-.menu a:focus-visible,
-.menu button:focus-visible {
-  outline: 3px solid var(--whiteColor);
-  outline-offset: -3px;
-}
-
-.menuSpacing {
-  height: 59px;
+.menu .curriculo:hover {
+  background: var(--accentColor);
+  color: var(--primaryColorStrong);
 }
 
 .menu-icon {
   display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--whiteColor);
+  padding: 1.2rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
   cursor: pointer;
-  padding: 15px;
+  font-size: 2.2rem;
 }
 
-.menu-language {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--whiteColor);
-  cursor: pointer;
-  padding: 15px;
-}
+@media (max-width: 920px) {
+  .menuContent {
+    min-height: 6.4rem;
+    padding: 0 2rem;
+  }
 
-/* Responsiveness */
-@media (max-width: 768px) {
   .menu ul {
-    flex-direction: column;
-    display: none;
-    width: 100%;
-    background-color: var(--primaryColor);
     position: absolute;
     top: 100%;
+    right: 0;
     left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.2rem 2rem 2rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    background: var(--primaryColorStrong);
   }
 
   .menu ul.show {
     display: flex;
   }
 
+  .menu ul li a,
+  .menu-language {
+    width: 100%;
+    min-height: 4.6rem;
+    justify-content: flex-start;
+    padding: 0 1.2rem;
+  }
+
+  .menu .curriculo {
+    justify-content: center;
+    margin: 0.8rem 0 0;
+  }
+
   .menu-icon {
     display: block;
   }
+}
 
-  .menu ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .menu ul li a {
-    padding: 1rem;
-    font-size: 1.2rem;
+@media (max-width: 480px) {
+  .menu h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
   }
 }

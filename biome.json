@@ -1,14 +1,134 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "master"
+  },
   "files": {
-    "includes": ["**", "!**/node_modules", "!**/*.svg", "!templates"]
+    "ignoreUnknown": true,
+    "includes": ["**", "!**/node_modules", "!assets/img", "!templates"]
   },
   "formatter": {
     "enabled": true,
+    "formatWithErrors": false,
     "indentStyle": "space",
-    "indentWidth": 2
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "attributePosition": "auto",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "expand": "auto",
+    "trailingNewline": true,
+    "useEditorconfig": true
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "arrowParentheses": "always",
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    },
+    "jsxRuntime": "transparent"
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "trailingCommas": "none"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    },
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single"
+    }
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true,
+    "formatter": {
+      "enabled": true,
+      "attributePosition": "auto",
+      "bracketSameLine": false,
+      "selfCloseVoidElements": "never",
+      "whitespaceSensitivity": "css"
+    }
   },
   "linter": {
-    "enabled": true
-  }
+    "enabled": true,
+    "domains": {
+      "project": "recommended",
+      "types": "recommended"
+    },
+    "rules": {
+      "preset": "recommended",
+      "a11y": {
+        "noRedundantAlt": "error",
+        "useAltText": "error",
+        "useHtmlLang": "error"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "error",
+        "noUselessTernary": "error",
+        "noUselessUndefined": "error",
+        "useArrayFind": "error",
+        "useOptionalChain": "error"
+      },
+      "correctness": {
+        "noUndeclaredDependencies": "error",
+        "noUnresolvedImports": "error"
+      },
+      "performance": {
+        "noAwaitInLoops": "error",
+        "useTopLevelRegex": "error"
+      },
+      "style": {
+        "noParameterAssign": "error",
+        "useBlockStatements": "error",
+        "useConst": "error",
+        "useDefaultParameterLast": "error"
+      },
+      "suspicious": {
+        "noConsole": "error",
+        "noImportCycles": "error",
+        "noShadow": "error",
+        "noTsIgnore": "error"
+      }
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "noDuplicateClasses": "on",
+        "organizeImports": "on",
+        "useSortedPackageJson": "on"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["scripts/**"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "noExcessiveCognitiveComplexity": "off"
+          },
+          "performance": {
+            "noAwaitInLoops": "off",
+            "useTopLevelRegex": "off"
+          },
+          "suspicious": {
+            "noConsole": "off"
+          }
+        }
+      }
+    }
+  ]
 }

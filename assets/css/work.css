@@ -1,143 +1,163 @@
 .workContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap);
-  min-height: 100vh;
-  padding-top: 50px;
+  max-width: 96rem;
 }
 
-.workText {
+.workHero {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2.4rem;
+  padding-bottom: 4.8rem;
+  border-bottom: 1px solid var(--borderColor);
 }
 
-.workImg {
-  max-width: 80%;
+.workHeroText {
+  max-width: 68rem;
+}
+
+.workHeroText h2 {
+  margin-bottom: 1.6rem;
+}
+
+.workHeroText > p:not(.eyebrow) {
+  color: var(--mutedColor);
+  font-size: clamp(1.75rem, 2.4vw, 2rem);
+}
+
+.workHero .buttonLink {
+  flex-shrink: 0;
+}
+
+.workHero .buttonLink:hover {
+  color: var(--primaryColorStrong);
+}
+
+.workSection {
+  margin-top: 5.6rem;
+}
+
+.sectionTitle {
+  margin-bottom: 0.8rem;
+  color: var(--primaryColor);
+}
+
+.sectionDescription {
+  max-width: 68rem;
+  color: var(--mutedColor);
+}
+
+.skillGroups {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  gap: 100px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+  margin-top: 2.4rem;
 }
 
-.workText h2 {
+.skillGroup {
+  padding: 2rem;
+  border: 1px solid var(--borderColor);
+  border-radius: 1.2rem;
+  background: var(--surfaceColor);
+  box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.04);
+}
+
+.skillGroup h4 {
+  margin-bottom: 0.8rem;
+  color: var(--accentStrongColor);
+}
+
+.skillGroup p {
+  color: var(--mutedColor);
+  font-size: 1.55rem;
+}
+
+.experienceTimeline {
+  position: relative;
+  display: grid;
+  gap: 1.8rem;
+  margin-top: 2.8rem;
+  padding-left: 3.2rem;
+  list-style: none;
+}
+
+.experienceTimeline::before {
+  position: absolute;
+  top: 0.8rem;
+  bottom: 0.8rem;
+  left: 0.7rem;
+  width: 2px;
+  background: var(--borderColor);
+  content: '';
+}
+
+.timelineItem {
+  position: relative;
+  padding: 2.4rem;
+  border: 1px solid var(--borderColor);
+  border-radius: 1.2rem;
+  background: var(--surfaceColor);
+  box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.04);
+}
+
+.timelineItem::before {
+  position: absolute;
+  top: 2.8rem;
+  left: -3.15rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 3px solid var(--surfaceMutedColor);
+  border-radius: 50%;
+  background: var(--accentStrongColor);
+  box-shadow: 0 0 0 1px var(--accentStrongColor);
+  content: '';
+}
+
+.timelineMeta {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--accentStrongColor);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 2.3rem;
+}
+
+.timelineItem h4 {
+  margin-bottom: 0.4rem;
+  color: var(--primaryColor);
+}
+
+.timelineCompany {
   margin-bottom: 1.2rem;
+  color: var(--mutedColor);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.workText p {
-  margin-bottom: 0.9rem;
+.timelineItem > p:last-child {
+  color: var(--mutedColor);
 }
 
-.workImg img {
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-}
-
-.workText {
-  overflow: auto;
-}
-
-.workText {
-  transform: translateX(-100%);
-  animation: slideIn 2s forwards;
-}
-
-.curriculo {
-  background-color: transparent;
-  color: inherit;
-  border: 2px solid var(--primaryColor);
-  padding: 10px 20px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition:
-    background-color 0.3s,
-    color 0.3s,
-    transform 0.2s;
-  cursor: pointer;
-}
-
-.curriculo:hover {
-  transform: translateY(-3px);
-}
-
-.linkcurriculo {
-  display: flex;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
+@media (max-width: 640px) {
+  .skillGroups {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: translateX(0);
+
+  .workHero .buttonLink {
+    width: 100%;
   }
-}
 
-.imgreact {
-  overflow: auto;
-}
-
-.imgreact {
-  transform-origin: center;
-  animation: rotate 5s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+  .experienceTimeline {
+    padding-left: 2.6rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .timelineItem {
+    padding: 2rem;
   }
-}
 
-.imgbanco {
-  overflow: auto;
-}
-
-.imgbanco {
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.pulse {
-  overflow: auto;
-}
-
-.pulse {
-  animation: pulse 2s infinite alternate;
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-@media (max-width: 1280px) {
-  .workContent {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-top: 0px;
+  .timelineItem::before {
+    left: -2.55rem;
   }
 }

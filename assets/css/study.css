@@ -1,82 +1,123 @@
-.gridOneContentStudy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
+.studyContent {
+  max-width: 112rem;
 }
 
-.gridMainHeadingStudy {
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-  font-size: 2.8rem;
-  text-align: center;
+.studyHero {
+  max-width: 72rem;
+  padding-bottom: 5.6rem;
+  border-bottom: 1px solid var(--borderColor);
 }
 
-.gridDescriptionStudy {
-  margin-bottom: 3rem;
-  font-size: 2rem;
-  text-align: center;
+.studyHero h2 {
+  margin-bottom: 1.6rem;
+  color: var(--primaryColor);
 }
 
-.gridTitleStudy {
-  text-align: center;
-  font-weight: bold;
-  margin: 2rem;
+.studyHero > p:not(.eyebrow) {
+  color: var(--mutedColor);
+  font-size: clamp(1.75rem, 2.4vw, 2rem);
 }
 
-.gridStudy {
+.certificateCatalog {
+  margin-top: 5.6rem;
+}
+
+.catalogHeader {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.gridStudy img {
-  width: 350px;
-  height: auto;
-  transition: all 300ms ease-in-out;
-  cursor: pointer;
-  margin: 0 10px;
+.catalogHeader h3,
+.certificateCategory h4 {
+  color: var(--primaryColor);
 }
 
-.gridStudy img:hover {
-  transform: scale(1.1);
+.catalogHeader > p {
+  max-width: 46rem;
+  color: var(--mutedColor);
 }
 
-@media (max-width: 768px) {
-  .gridMainHeadingStudy {
-    font-size: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-  }
+.certificateCategory {
+  margin-top: 5.2rem;
+}
 
-  .gridDescriptionStudy {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
+.certificateCategory h4 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+}
 
-  .gridStudy {
-    gap: 15px;
-  }
+.certificateCategory h4::before {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: var(--accentStrongColor);
+  content: '';
+}
 
-  .gridStudy img {
-    width: 80%;
+.certificateGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.certificateCard {
+  overflow: hidden;
+  border: 1px solid var(--borderColor);
+  border-radius: 1.2rem;
+  background: var(--surfaceColor);
+  box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.06);
+}
+
+.certificateCard a {
+  display: block;
+  height: 100%;
+}
+
+.certificateCard img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.certificateCard a:hover img {
+  filter: saturate(1.08);
+  transform: scale(1.035);
+}
+
+.certificateCard a:focus-visible {
+  display: block;
+  outline-offset: -0.5rem;
+}
+
+@media (max-width: 860px) {
+  .certificateGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 480px) {
-  .gridMainHeadingStudy {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+@media (max-width: 560px) {
+  .studyHero {
+    padding-bottom: 4rem;
   }
 
-  .gridDescriptionStudy {
-    font-size: 1.5rem;
+  .certificateCatalog,
+  .certificateCategory {
+    margin-top: 4rem;
   }
 
-  .gridStudy img {
-    width: 100%;
-    margin: 10px 0;
+  .certificateGrid {
+    grid-template-columns: 1fr;
   }
 }

@@ -6,15 +6,15 @@ Portfólio pessoal estático para apresentar experiência profissional, principa
 
 - `aboutMe.html`: apresentação e habilidades.
 - `work.html`: experiência profissional e currículo para download.
-- `top3Work.html`: três áreas de especialidade.
 - `study.html`: formação e certificados.
-- `contact.html`: redes sociais e formulário que abre o cliente de e-mail do visitante.
+- `contact.html`: redes sociais e formulário traduzido que abre o cliente de e-mail do visitante.
 
 ## Tecnologias e qualidade
 
 - HTML, CSS e JavaScript puro.
 - [i18next](https://www.i18next.com/) via CDN para conteúdo em português e inglês.
 - [Biome](https://biomejs.dev/) para formatação e análise estática dos arquivos do projeto.
+- `.editorconfig` e `biome.json` definem a formatação compartilhada: dois espaços, fim de linha LF e largura máxima de 100 colunas.
 - Netlify para hospedagem e redirecionamento da rota inicial para `aboutMe.html`.
 
 ## Desenvolvimento local
@@ -53,4 +53,4 @@ O GitHub Actions executa `npm run check` em pull requests e envios para `master`
 
 ## Publicação
 
-O arquivo `netlify.toml` mantém a rota `/` servindo `aboutMe.html`. Antes de publicar, valide o menu nos dois idiomas e os links externos.
+O arquivo `netlify.toml` mantém a rota `/` servindo `aboutMe.html` e redireciona `/top3work` para `/work.html`. Antes de publicar, valide o menu nos dois idiomas e os links externos.

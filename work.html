@@ -1,90 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Henrique 👨🏻‍💻</title>
-    <link rel="icon" href="/assets/img/favicon.png" />
-    <link rel="stylesheet" href="/assets/css/variables.css">
-    <link rel="stylesheet" href="/assets/css/elements.css">
-    <link rel="stylesheet" href="/assets/css/classes.css">
-    <link rel="stylesheet" href="/assets/css/menu.css">
-    <link rel="stylesheet" href="/assets/css/work.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+      content="Experiência profissional de Matheus Henrique em desenvolvimento front-end, sustentação de sistemas e integrações."
+      name="description"
+    >
+    <title>Experiência | Matheus Henrique</title>
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/css/variables.css" rel="stylesheet">
+    <link href="/assets/css/elements.css" rel="stylesheet">
+    <link href="/assets/css/classes.css" rel="stylesheet">
+    <link href="/assets/css/menu.css" rel="stylesheet">
+    <link href="/assets/css/aboutMe.css" rel="stylesheet">
+    <link href="/assets/css/work.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    >
     <script src="https://unpkg.com/i18next@20.6.1/dist/umd/i18next.min.js"></script>
-</head>
-
-<body>
+  </head>
+  <body>
     <!-- generated:navigation:start -->
-<aside class="menu">
-    <div class="mainContent menuContent">
+    <aside class="menu">
+      <div class="mainContent menuContent">
         <h1><a href="aboutMe.html">Matheus Henrique 👨🏻‍💻</a></h1>
         <nav>
-            <ul id="menu-items">
-                <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
-                <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
-                <li><a href="top3Work.html" data-navigation-key="specialties">3 principais áreas</a></li>
-                <li><a href="study.html" data-navigation-key="education">Formação</a></li>
-                <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
-                <li>
-                    <button class="menu-language" type="button" data-language-toggle onclick="toggleLanguage()">
-                        <i class="fa-solid fa-language"></i>
-                    </button>
-                </li>
-                <li>
-                    <a href="/assets/cv/curriculo.pdf" download="curriculo.pdf" class="curriculo linkcurriculo">
-                        <i class="fa-solid fa-file-arrow-down"></i>
-                        <span data-navigation-key="resume">Baixar currículo</span>
-                    </a>
-                </li>
-            </ul>
-            <button id="menu-toggle" class="menu-icon" type="button" aria-controls="menu-items" aria-expanded="false" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
-            </button>
+          <ul id="menu-items">
+            <li><a href="aboutMe.html" data-navigation-key="about">Sobre mim</a></li>
+            <li><a href="work.html" data-navigation-key="work">Experiência</a></li>
+            <li><a href="study.html" data-navigation-key="education">Formação</a></li>
+            <li><a href="contact.html" data-navigation-key="contact">Contato</a></li>
+            <li>
+              <button
+                class="menu-language"
+                type="button"
+                data-language-toggle
+                onclick="toggleLanguage()"
+              >
+                <i class="fa-solid fa-language"></i>
+              </button>
+            </li>
+            <li>
+              <a
+                href="/assets/cv/curriculo.pdf"
+                download="curriculo.pdf"
+                class="curriculo linkcurriculo"
+              >
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span data-navigation-key="resume">Baixar currículo</span>
+              </a>
+            </li>
+          </ul>
+          <button
+            id="menu-toggle"
+            class="menu-icon"
+            type="button"
+            aria-controls="menu-items"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
         </nav>
-    </div>
-</aside>
-<!-- generated:navigation:end -->
-    <section id="work" class="whiteBg section">
-        <div class="mainContent workContent">
-            <div class="workText">
-                <h3 id="workTitle">📚 Experiência</h3>
-                <p id="workText"></p>
-                <br>
-                <br>
-                <h3 id="skillsTitle">🔧 Habilidades</h3>
-                <p id="skillsText">
-                    - <strong id="lang"></strong> Java, JavaScript, TypeScript <br>
-                    - <strong>Back-end FrameWorks:</strong> Spring Boot <br>
-                    - <strong>Front-end:</strong> HTML, CSS, JavaScript, TypeScript, React, Next.js <br>
-                    - <strong id="styles"></strong> Bootstrap, Tailwind, Shadcn <br>
-                    - <strong id="database"></strong> SQL, MySQL, PostgreSQL <br>
-                    - <strong id="tools"></strong> Git, GitHub, RESTful APIs <br>
-                </p>
-                <br>
-                <br>
-                <h3 id="experience">💼 Experiência profissional</h3>
-                <br>
-                <h5 id="kyrosTitle">Kyros Tecnologia - Analista de Sistemas II</h5>
-                <p id="kyrosText"></p>
-                <br>
-                <h5 id="kyrosTitleEstagiario">Kyros Tecnologia - Estagiário de Desenvolvimento</h5>
-                <p id="kyrosTextEstagiario"></p>
-                <br>
-                <h5 id="relotecTitle">Relotec Sistemas de Ponto e Acesso - Suporte de Sistemas</h5>
-                <p id="relotecText"></p>
-            </div>
-            <div class="workImg">
-                <img src="/assets/img/spring-boot-svgrepo.svg" alt="Spring Boot Logo" class="pulse">
-                <img src="/assets/img/java-logo-svgrepo.svg" alt="Java Logo" class="pulse">
-                <img src="/assets/img/database-svgrepo.svg" alt="Database Logo" class="imgbanco">
-                <img src="/assets/img/react-svgreposvg.svg" alt="React Logo" class="imgreact">
-            </div>
-        </div>
-    </section>
+      </div>
+    </aside>
+    <!-- generated:navigation:end -->
+
+    <main class="whiteBg section" id="work">
+      <div class="mainContent workContent">
+        <section aria-labelledby="workTitle" class="workHero">
+          <div class="workHeroText">
+            <p class="eyebrow" id="workEyebrow">Trajetória profissional</p>
+            <h2 id="workTitle">Tecnologia com foco em qualidade e continuidade</h2>
+            <p id="workText">
+              Atuo no desenvolvimento e na sustentação de aplicações web, contribuindo desde a
+              análise de fluxos até interfaces responsivas, integrações e evolução de sistemas em
+              produção.
+            </p>
+          </div>
+          <a
+            class="buttonLink"
+            download="curriculo.pdf"
+            href="/assets/cv/curriculo.pdf"
+            id="resumeAction"
+          >
+            <i aria-hidden="true" class="fa-solid fa-file-arrow-down"></i>&nbsp;<span
+              id="resumeActionText"
+              >Baixar currículo</span
+            >
+          </a>
+        </section>
+
+        <section aria-labelledby="skillsTitle" class="workSection">
+          <p class="eyebrow" id="skillsEyebrow">Competências</p>
+          <h3 class="sectionTitle" id="skillsTitle">
+            Uma atuação que conecta interface, dados e processos
+          </h3>
+          <p class="sectionDescription" id="skillsDescription">
+            Tecnologias e práticas usadas para entregar interfaces claras, integrações sustentáveis
+            e uma experiência consistente.
+          </p>
+          <div class="skillGroups">
+            <article class="skillGroup">
+              <h4 id="frontendTitle">Front-end</h4>
+              <p id="frontendText">React, Next.js, Angular, JavaScript, TypeScript, HTML e CSS.</p>
+            </article>
+            <article class="skillGroup">
+              <h4 id="backendTitle">Integrações e back-end</h4>
+              <p id="backendText">
+                Java, Spring Boot, Node.js, APIs REST e suporte a serviços consumidos pelo
+                front-end.
+              </p>
+            </article>
+            <article class="skillGroup">
+              <h4 id="dataTitle">Dados</h4>
+              <p id="dataText">
+                SQL, PostgreSQL, modelagem de dados e colaboração na definição de DDLs.
+              </p>
+            </article>
+            <article class="skillGroup">
+              <h4 id="qualityTitle">Qualidade e entrega</h4>
+              <p id="qualityText">
+                Git, análise de fluxos, documentação técnica, investigação de falhas e melhoria
+                contínua.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="experienceTitle" class="workSection">
+          <p class="eyebrow" id="experienceEyebrow">Experiência</p>
+          <h3 class="sectionTitle" id="experienceTitle">
+            Construindo uma trajetória em tecnologia
+          </h3>
+          <p class="sectionDescription" id="experienceDescription">
+            Experiências organizadas pela evolução de responsabilidades, com foco em produtos web e
+            operação de sistemas.
+          </p>
+          <ol class="experienceTimeline">
+            <li class="timelineItem">
+              <span class="timelineMeta" id="currentPeriod">Desde agosto de 2026 · Remoto</span>
+              <h4 id="currentRole">
+                Analista de Sistemas VI · Desenvolvimento Full Stack e Sustentação
+              </h4>
+              <p class="timelineCompany">Kyros Tecnologia | Fábrica de Software</p>
+              <p id="currentDescription">
+                Atuação em sustentação de produção, análise e resolução de incidentes, evolução de
+                aplicações, APIs e bancos de dados, com investigação de causa raiz e validação de
+                soluções.
+              </p>
+            </li>
+            <li class="timelineItem">
+              <span class="timelineMeta" id="analystSixPeriod"
+                >Desde novembro de 2025 · Híbrido</span
+              >
+              <h4 id="analystSixRole">Analista de Sistemas VI</h4>
+              <p class="timelineCompany">Kyros Tecnologia | Fábrica de Software</p>
+              <p id="analystSixDescription">
+                Desenvolvimento front-end, documentação e implementação de soluções, apoiando
+                desenho técnico, processos, DDLs e integrações entre serviços e interfaces.
+              </p>
+            </li>
+            <li class="timelineItem">
+              <span class="timelineMeta" id="analystTwoPeriod"
+                >Abril de 2025 — novembro de 2025 · Remoto</span
+              >
+              <h4 id="analystTwoRole">Analista de Sistemas II</h4>
+              <p class="timelineCompany">Kyros Tecnologia | Fábrica de Software</p>
+              <p id="analystTwoDescription">
+                Concepção e desenvolvimento de telas responsivas, análise de páginas, documentação e
+                definição de fluxos para projetos internos e externos.
+              </p>
+            </li>
+            <li class="timelineItem">
+              <span class="timelineMeta" id="internPeriod"
+                >Outubro de 2023 — abril de 2025 · Remoto</span
+              >
+              <h4 id="internRole">Estagiário de Desenvolvimento</h4>
+              <p class="timelineCompany">Kyros Tecnologia | Fábrica de Software</p>
+              <p id="internDescription">
+                Participação em aplicações web em ambiente ágil, com Java, Spring Boot, bancos de
+                dados e tecnologias modernas de front-end.
+              </p>
+            </li>
+            <li class="timelineItem">
+              <span class="timelineMeta" id="supportPeriod"
+                >Maio de 2023 — setembro de 2023 · Presencial</span
+              >
+              <h4 id="supportRole">Suporte de Sistemas</h4>
+              <p class="timelineCompany">Relotec Sistemas de Ponto e Acesso</p>
+              <p id="supportDescription">
+                Suporte técnico a sistemas de controle de ponto e acesso, contribuindo para a
+                estabilidade das operações e a resolução de problemas.
+              </p>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
     <script src="/assets/js/i18nWork.js"></script>
     <script src="/assets/js/menu.js"></script>
-</body>
-
+  </body>
 </html>

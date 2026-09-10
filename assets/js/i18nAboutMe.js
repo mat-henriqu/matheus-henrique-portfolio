@@ -1,36 +1,47 @@
 const resources = {
   en: {
     translation: {
-      aboutMe: "About me",
-      description:
-        "I am a front-end developer with experience in React, Next.js, TypeScript, Angular, Java and Spring Boot, focused on creating web applications that combine quality, performance and a great user experience. I have advanced knowledge of HTML, CSS and styling frameworks such as Bootstrap, Tailwind and Shadcn, always aiming to deliver efficient and scalable solutions. My goal is to evolve constantly by creating solutions that bring real business value and intuitive experiences to users, combining technology with good development practices.",
-      skills: "Skills",
+      aboutMeEyebrow: 'Professional portfolio',
+      aboutMeTitle: 'Front-end developer focused on useful products',
+      aboutMeDescription:
+        'I build web applications that combine quality, performance, and a clear experience for the people who use them. I bring together front-end development, API integration, and database knowledge to turn business needs into consistent solutions.',
+      workAction: 'Explore my experience',
+      contactAction: 'Get in touch',
+      skillsEyebrow: 'Technologies',
+      skillsTitle: 'Technical foundations for building and evolving products',
+      skillsDescription:
+        'A skill set focused on responsive interfaces, reliable integrations, and collaboration across front-end, back-end, and data.',
     },
   },
   pt: {
     translation: {
-      aboutMe: "Sobre mim",
-      description:
-        "Sou Desenvolvedor Front-End com experiência em React, Next.js, TypeScript, Angular, Java e Spring Boot, focado em criar aplicações web que unem qualidade, performance e boa experiência de usuário. Tenho conhecimento avançado em HTML, CSS e frameworks de estilização como Bootstrap, Tailwind e Shadcn, sempre buscando entregar soluções eficientes e escaláveis. Meu objetivo é evoluir constantemente, criando soluções que tragam valor real para o negócio e experiências intuitivas para os usuários, sempre aliando tecnologia e boas práticas de desenvolvimento.",
-      skills: "Habilidades",
+      aboutMeEyebrow: 'Portfólio profissional',
+      aboutMeTitle: 'Desenvolvedor Front-End focado em produtos úteis',
+      aboutMeDescription:
+        'Crio aplicações web que combinam qualidade, desempenho e uma experiência clara para quem usa. Uno desenvolvimento front-end, integração com APIs e conhecimento em banco de dados para transformar necessidades de negócio em soluções consistentes.',
+      workAction: 'Conhecer minha experiência',
+      contactAction: 'Entrar em contato',
+      skillsEyebrow: 'Tecnologias',
+      skillsTitle: 'Base técnica para construir e evoluir produtos',
+      skillsDescription:
+        'Um repertório voltado para interfaces responsivas, integrações confiáveis e colaboração entre front-end, back-end e dados.',
     },
   },
 };
 
 function updateContent() {
-  document.getElementById("aboutMeTitle").textContent = i18next.t("aboutMe");
-  document.getElementById("aboutMeDescription").textContent =
-    i18next.t("description");
-  document.getElementById("skillsTitle").textContent = i18next.t("skills");
+  Object.keys(resources.pt.translation).forEach((key) => {
+    document.getElementById(key).textContent = i18next.t(key);
+  });
 }
 
 i18next.init(
   {
-    lng: localStorage.getItem("portfolio-language") || "pt",
-    fallbackLng: "pt",
+    lng: localStorage.getItem('portfolio-language') || 'pt',
+    fallbackLng: 'pt',
     resources,
   },
   updateContent,
 );
 
-document.addEventListener("portfolio:languagechange", updateContent);
+document.addEventListener('portfolio:languagechange', updateContent);

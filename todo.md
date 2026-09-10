@@ -2,11 +2,12 @@
 
 ## Alta prioridade
 
+- [x] Remover a página `top3Work.html`, o item correspondente do menu e a rota `/top3work`, redirecionando visitantes para `/work`.
 - [x] Remover a página `Projects` e a rota correspondente.
 - [x] Fazer a troca de idioma atualizar a navegação e persistir a escolha entre páginas.
 - [x] Adicionar Biome como padrão de formatação e análise estática.
-- [ ] Validar manualmente os cinco fluxos de navegação e a troca PT/EN em desktop e mobile.
-- [ ] Revisar os links de certificados e redes sociais, removendo destinos expirados ou indisponíveis.
+- [x] Validar manualmente os cinco fluxos de navegação e a troca PT/EN em desktop e mobile.
+- [x] Revisar os links de certificados e redes sociais, removendo destinos expirados ou indisponíveis.
 
 ## Média prioridade
 
@@ -20,3 +21,4 @@
 - [ ] Adicionar tema claro/escuro com preferência persistida.
 - [x] Criar integração contínua que execute `npm run check` em pull requests e envios para `master`.
 - [ ] Adicionar métricas de acessibilidade e desempenho (Lighthouse) ao fluxo de publicação.
+- [x] Uniformizar o layout das páginas de apresentação, experiência, formação e contato.

@@ -1,83 +1,176 @@
-.aboutMe {
-  display: flex;
-  justify-content: center;
+.aboutMeContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(28rem, 0.9fr);
+  gap: clamp(3.2rem, 8vw, 9.6rem);
   align-items: center;
 }
 
-.aboutMeContent {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: var(--gap);
-}
-
 .aboutMeText {
-  display: flex;
-  flex-flow: column nowrap;
-  flex: 1 1 50%;
-  justify-content: center;
+  max-width: 68rem;
 }
 
-.aboutMeText {
-  overflow: auto;
-}
-
-@keyframes reveal {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.aboutMeText {
-  animation: reveal 4s alternate;
-}
-
-.aboutMeImg {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-}
-
-.aboutMeImg {
-  overflow: auto;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.aboutMeImg {
-  animation: bounce 2s infinite;
+.eyebrow {
+  margin-bottom: 1.6rem;
+  color: var(--accentColor);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .aboutMeText h2 {
-  text-transform: uppercase;
-  font-size: 2.3rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-.aboutMeText p {
-  margin-bottom: 0.9rem;
+.aboutMeText > p:not(.eyebrow) {
+  max-width: 61rem;
+  color: #d8e2f0;
+  font-size: clamp(1.75rem, 2.4vw, 2rem);
 }
 
-.aboutMeImg img {
-  max-width: 100%;
+.aboutMeActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 3.2rem;
+}
+
+.buttonLink {
+  display: inline-flex;
+  min-height: 4.8rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.8rem;
+  border: 1px solid var(--accentColor);
+  border-radius: 0.6rem;
+  background: var(--accentColor);
+  color: var(--primaryColorStrong);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.buttonLink:hover {
+  transform: translateY(-2px);
+  background: #7dd3fc;
+}
+
+.buttonLink--secondary {
+  background: transparent;
+  color: var(--whiteColor);
+}
+
+.buttonLink--secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--whiteColor);
+}
+
+.aboutMeVisual {
+  position: relative;
+  display: grid;
+  min-height: 38rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(125, 211, 252, 0.26);
+  border-radius: 1.6rem;
+  background: linear-gradient(145deg, rgba(56, 189, 248, 0.17), rgba(99, 102, 241, 0.08));
+  box-shadow: 0 2.4rem 5rem rgba(0, 0, 0, 0.22);
+}
+
+.aboutMeVisual::before,
+.aboutMeVisual::after {
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  border: 1px solid rgba(125, 211, 252, 0.24);
+  border-radius: 50%;
+  content: '';
+}
+
+.aboutMeVisual::before {
+  top: -7rem;
+  right: -5rem;
+}
+
+.aboutMeVisual::after {
+  bottom: -9rem;
+  left: -5rem;
+}
+
+.aboutMeVisual img {
+  position: relative;
+  z-index: 1;
+  width: min(78%, 35rem);
   height: auto;
+  filter: drop-shadow(0 1.6rem 2.4rem rgba(0, 0, 0, 0.25));
 }
 
-@media (max-width: 1280px) {
+.skillsSection {
+  margin-top: clamp(5.6rem, 10vw, 10rem);
+  padding-top: 3.2rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.24);
+}
+
+.skillsHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.skillsHeader h3 {
+  color: var(--whiteColor);
+}
+
+.skillsHeader p {
+  max-width: 45rem;
+  color: #cbd5e1;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.4rem;
+  list-style: none;
+}
+
+.skillList li {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid rgba(125, 211, 252, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #e0f2fe;
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+@media (max-width: 820px) {
   .aboutMeContent {
-    margin-top: 50px;
-    display: flex;
+    grid-template-columns: 1fr;
+  }
+
+  .aboutMeVisual {
+    min-height: 29rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutMeActions {
     flex-direction: column;
-    min-height: 100vh;
+  }
+
+  .buttonLink {
+    width: 100%;
+  }
+
+  .aboutMeVisual {
+    min-height: 24rem;
   }
 }
